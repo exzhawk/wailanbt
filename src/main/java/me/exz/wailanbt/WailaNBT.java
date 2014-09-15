@@ -2,6 +2,7 @@ package me.exz.wailanbt;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import me.exz.wailanbt.reference.Reference;
@@ -18,7 +19,7 @@ public class WailaNBT {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
+        FMLInterModComms.sendMessage("Waila","register","me.exz.wailanbt.wailaNBTHandler.callbackRegister");
     }
 
     @Mod.EventHandler
