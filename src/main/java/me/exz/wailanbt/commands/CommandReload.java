@@ -1,9 +1,8 @@
 package me.exz.wailanbt.commands;
 
+import me.exz.wailanbt.configuration.config;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ChatComponentText;
 
 public class CommandReload extends CommandBase {
 
@@ -24,7 +23,6 @@ public class CommandReload extends CommandBase {
 
     @Override
     public void processCommand(ICommandSender sender, String[] array) {
-        EntityPlayer player = (EntityPlayer) sender;
-        player.addChatComponentMessage(new ChatComponentText("233"));
+        config.loadConfig();
     }
 }

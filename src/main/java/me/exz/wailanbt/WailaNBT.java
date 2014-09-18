@@ -1,11 +1,11 @@
 package me.exz.wailanbt;
 
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import me.exz.wailanbt.commands.CommandName;
 import me.exz.wailanbt.commands.CommandReload;
 import me.exz.wailanbt.configuration.config;
@@ -15,23 +15,20 @@ import net.minecraftforge.client.ClientCommandHandler;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class WailaNBT {
-    @Mod.Instance(Reference.MOD_ID)
-    public static WailaNBT instance;
-
+    @SideOnly(Side.CLIENT)
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        config.loadConfig(event.getSuggestedConfigurationFile());
+        LogHelper.info("Initializing config");
+        config.init(event.getSuggestedConfigurationFile());
+        LogHelper.info("Config initialized");
     }
 
+    @SideOnly(Side.CLIENT)
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         FMLInterModComms.sendMessage("Waila", "register", "me.exz.wailanbt.wailaNBTHandler.callbackRegister");
         ClientCommandHandler.instance.registerCommand(new CommandReload());
         ClientCommandHandler.instance.registerCommand(new CommandName());
-    }
-
-    @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
     }
 
 
