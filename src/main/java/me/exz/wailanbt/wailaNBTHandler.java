@@ -6,7 +6,10 @@ import mcp.mobius.waila.api.IWailaDataAccessor;
 import mcp.mobius.waila.api.IWailaDataProvider;
 import mcp.mobius.waila.api.IWailaRegistrar;
 import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 
 import java.util.List;
 
@@ -23,15 +26,28 @@ public class wailaNBTHandler implements IWailaDataProvider {
 
     @Override
     public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
-        currenttip.add("233333");
+        TileEntity te = accessor.getTileEntity();
+        if (te == null) {
+            return currenttip;
+        }
+        NBTTagCompound n = new NBTTagCompound();
+        te.writeToNBT(n);
+        //String id = n.getString("id");
+        Integer mana = n.getInteger("mana");
+        Boolean hasMana = n.hasKey("mana");
+        EntityPlayer player = accessor.getPlayer();
+        //LogHelper.info(Item.itemRegistry.getNameForObject(player.getHeldItem().getItem()));
+        currenttip.add("Mana: "+mana.toString());
         return currenttip;
+
     }
 
     @Override
     public List<String> getWailaTail(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
         return currenttip;
     }
-    public static void callbackRegister(IWailaRegistrar registrar){
+
+    public static void callbackRegister(IWailaRegistrar registrar) {
         wailaNBTHandler instance = new wailaNBTHandler();
         registrar.registerBodyProvider(instance, Block.class);
     }
