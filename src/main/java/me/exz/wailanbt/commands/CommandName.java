@@ -4,9 +4,10 @@ import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 
-public class CommandName extends CommandBase{
+public class CommandName extends CommandBase {
     @Override
     public String getCommandName() {
         return "wnn";
@@ -25,6 +26,11 @@ public class CommandName extends CommandBase{
     @Override
     public void processCommand(ICommandSender sender, String[] array) {
         EntityPlayer player = (EntityPlayer) sender;
-        player.addChatComponentMessage(new ChatComponentText(Item.itemRegistry.getNameForObject(player.getHeldItem().getItem())));
+        ItemStack holdItem = player.getHeldItem();
+        if (holdItem == null) {
+            player.addChatComponentMessage(new ChatComponentText("Not holding anything!"));
+            return;
+        }
+        player.addChatComponentMessage(new ChatComponentText(Item.itemRegistry.getNameForObject(holdItem.getItem())));
     }
 }

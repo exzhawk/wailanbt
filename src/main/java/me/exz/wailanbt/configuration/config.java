@@ -10,14 +10,12 @@ public class config {
     public static JsonElement configJson;
     private static File configFile = null;
 
-    public static void init(File file){
-        configFile=file;
-        if (file.exists()){
-            loadConfig();
-        }else{
+    public static void init(File file) {
+        configFile = file;
+        if (!file.exists()) {
             LogHelper.info("No config file found.");
             try {
-                if (file.createNewFile()){
+                if (file.createNewFile()) {
                     LogHelper.info("Empty config created");
                 }
             } catch (IOException e) {
@@ -25,7 +23,9 @@ public class config {
                 e.printStackTrace();
             }
         }
+        loadConfig();
     }
+
     public static void loadConfig() {
         try {
             InputStream inputStream = new FileInputStream(configFile);

@@ -73,7 +73,11 @@ public class wailaNBTHandler implements IWailaDataProvider {
     private static String getTipFromPathDeep(NBTTagCompound n, List<String> pathDeep, String type) {
         if (pathDeep.size() == 1) {
             String tagName = pathDeep.get(0);
-            return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", tagName, NBTHelper.NBTTypeToString(n, tagName, type));
+            String value = NBTHelper.NBTTypeToString(n, tagName, type);
+            if (value == null){
+                return null;
+            }
+            return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", tagName, value);
         } else {
             String compoundID = pathDeep.get(0);
             pathDeep.remove(0);
