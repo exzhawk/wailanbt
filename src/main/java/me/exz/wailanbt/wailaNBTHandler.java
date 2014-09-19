@@ -8,6 +8,7 @@ import mcp.mobius.waila.api.IWailaDataAccessor;
 import mcp.mobius.waila.api.IWailaDataProvider;
 import mcp.mobius.waila.api.IWailaRegistrar;
 import me.exz.wailanbt.configuration.config;
+import me.exz.wailanbt.util.LogHelper;
 import me.exz.wailanbt.util.NBTHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,6 +26,7 @@ import static mcp.mobius.waila.api.SpecialChars.*;
 public class wailaNBTHandler implements IWailaDataProvider {
     public static void callbackRegister(IWailaRegistrar registrar) {
         wailaNBTHandler instance = new wailaNBTHandler();
+        registrar.registerSyncedNBTKey("*",Block.class);
         registrar.registerBodyProvider(instance, Block.class);
     }
 
@@ -97,12 +99,10 @@ public class wailaNBTHandler implements IWailaDataProvider {
 
     @Override
     public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
-        TileEntity te = accessor.getTileEntity();
-        if (te == null) {
+        NBTTagCompound n = accessor.getNBTData();
+        if (n==null){
             return currenttip;
         }
-        NBTTagCompound n = new NBTTagCompound();
-        te.writeToNBT(n);
         EntityPlayer player = accessor.getPlayer();
         ItemStack holdItemReal = player.getHeldItem();
         String holdItemNameReal="";
