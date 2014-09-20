@@ -18,14 +18,15 @@ public class WailaNBT {
     @SideOnly(Side.CLIENT)
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+
         LogHelper.info("Initializing config");
-        config.init(event.getSuggestedConfigurationFile());
+        config.init(event.getModConfigurationDirectory());
         LogHelper.info("Config initialized");
     }
 
     @SideOnly(Side.CLIENT)
     @Mod.EventHandler
-    public void init(FMLInitializationEvent event) {
+    public void init(@SuppressWarnings("UnusedParameters") FMLInitializationEvent event) {
         FMLInterModComms.sendMessage("Waila", "register", "me.exz.wailanbt.wailaNBTHandler.callbackRegister");
         ClientCommandHandler.instance.registerCommand(new CommandReload());
         ClientCommandHandler.instance.registerCommand(new CommandName());

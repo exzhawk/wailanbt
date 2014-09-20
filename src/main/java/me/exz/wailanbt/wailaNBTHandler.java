@@ -1,21 +1,18 @@
 package me.exz.wailanbt;
 
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import mcp.mobius.waila.api.IWailaDataProvider;
 import mcp.mobius.waila.api.IWailaRegistrar;
 import me.exz.wailanbt.configuration.config;
-import me.exz.wailanbt.util.LogHelper;
 import me.exz.wailanbt.util.NBTHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
 
 import java.util.*;
 import java.util.regex.Matcher;
@@ -24,6 +21,7 @@ import java.util.regex.Pattern;
 import static mcp.mobius.waila.api.SpecialChars.*;
 
 public class wailaNBTHandler implements IWailaDataProvider {
+    @SuppressWarnings("UnusedDeclaration")
     public static void callbackRegister(IWailaRegistrar registrar) {
         wailaNBTHandler instance = new wailaNBTHandler();
         registrar.registerSyncedNBTKey("*",Block.class);
@@ -32,13 +30,7 @@ public class wailaNBTHandler implements IWailaDataProvider {
 
     private static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
         List<String> tips = new ArrayList<String>();
-        if (config.configJson.isJsonNull()){
-            return tips;
-        }
-        config.configJson.getAsJsonArray();
-        JsonArray holdItemList = config.configJson.getAsJsonArray();
-        for (JsonElement entry : holdItemList) {
-            Set<Map.Entry<String, JsonElement>> holdItemA = entry.getAsJsonObject().entrySet();
+            Set<Map.Entry<String, JsonElement>> holdItemA = config.configJson.entrySet();
             for (Map.Entry<String, JsonElement> holdItem : holdItemA) {
                 Pattern pattern = Pattern.compile(holdItem.getKey());
                 Matcher matcher = pattern.matcher(heldItemName);
@@ -49,7 +41,7 @@ public class wailaNBTHandler implements IWailaDataProvider {
                     }
                 }
             }
-        }
+
         return tips;
     }
 
