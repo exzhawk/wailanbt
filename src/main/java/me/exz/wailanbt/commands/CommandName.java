@@ -6,6 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChatComponentTranslation;
 
 public class CommandName extends CommandBase {
     @Override
@@ -28,7 +29,7 @@ public class CommandName extends CommandBase {
         EntityPlayer player = (EntityPlayer) sender;
         ItemStack holdItem = player.getHeldItem();
         if (holdItem == null) {
-            player.addChatComponentMessage(new ChatComponentText("Not holding anything!"));
+            player.addChatComponentMessage(new ChatComponentTranslation("wailanbt.info.notholding"));
             return;
         }
         player.addChatComponentMessage(new ChatComponentText(Item.itemRegistry.getNameForObject(holdItem.getItem())));

@@ -18,7 +18,6 @@ public class WailaNBT {
     @SideOnly(Side.CLIENT)
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
         LogHelper.info("Initializing config");
         config.init(event.getModConfigurationDirectory());
         LogHelper.info("Config initialized");
