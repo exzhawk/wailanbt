@@ -19,6 +19,7 @@ apply plugin: 'forge'
 
 version = "1.7.10-1.0"
 group= "me.exz.wailanbt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+//noinspection GroovyUnusedAssignment
 archivesBaseName = "WailaNBT"
 
 minecraft {
@@ -27,7 +28,6 @@ minecraft {
 }
 
 dependencies {
-    //compile fileTree(dir: 'libs', include: '*.jar,*.zip')
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
@@ -40,7 +40,6 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
 }
 
 processResources
