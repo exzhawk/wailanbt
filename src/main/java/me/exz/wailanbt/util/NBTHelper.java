@@ -4,12 +4,12 @@ import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 
 public class NBTHelper {
-    public static String NBTTypeToString(NBTTagCompound n, String id, @SuppressWarnings("UnusedParameters") String type) {
+    public static String NBTTypeToString(NBTTagCompound n, String id) {
         NBTBase tag = n.getTag(id);
         return tag.toString();
     }
 
-    @SuppressWarnings("UnusedDeclaration")
+    @SuppressWarnings({"UnusedDeclaration", "deprecation"})
     @Deprecated
     public static String NBTTypeToString_old(NBTTagCompound n, String id, String type) {
         try {
@@ -51,6 +51,7 @@ public class NBTHelper {
     public static enum NBTTypeName {
         TAG_End, TAG_Byte, TAG_Short, TAG_Integer, TAG_Long, TAG_Float, TAG_Double, TAG_ByteArray, TAG_String, TAG_List, TAG_Compound, TAG_IntArray, ERROR_VALUE;
 
+        @SuppressWarnings("deprecation")
         public static NBTTypeName TypeNameToID(String name) {
             try {
                 return valueOf(name);

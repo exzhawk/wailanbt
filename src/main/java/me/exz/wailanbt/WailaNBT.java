@@ -13,7 +13,7 @@ import me.exz.wailanbt.reference.Reference;
 import me.exz.wailanbt.util.LogHelper;
 import net.minecraftforge.client.ClientCommandHandler;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, dependencies = "required-after:Waila")
 public class WailaNBT {
     @SideOnly(Side.CLIENT)
     @Mod.EventHandler
@@ -30,6 +30,4 @@ public class WailaNBT {
         ClientCommandHandler.instance.registerCommand(new CommandReload());
         ClientCommandHandler.instance.registerCommand(new CommandName());
     }
-
-
 }

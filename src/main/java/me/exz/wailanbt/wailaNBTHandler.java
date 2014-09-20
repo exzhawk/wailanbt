@@ -59,23 +59,23 @@ public class wailaNBTHandler implements IWailaDataProvider {
         return tips;
     }
 
-    private static String getTipFromNBTWithPath(NBTTagCompound n, String path, String type) {
+    private static String getTipFromNBTWithPath(NBTTagCompound n, String path, String displayName) {
         List<String> pathDeep = new ArrayList<String>(Arrays.asList(path.split(">>>")));
-        return getTipFromPathDeep(n, pathDeep, type);
+        return getTipFromPathDeep(n, pathDeep, displayName);
     }
 
-    private static String getTipFromPathDeep(NBTTagCompound n, List<String> pathDeep, String type) {
+    private static String getTipFromPathDeep(NBTTagCompound n, List<String> pathDeep, String displayName) {
         if (pathDeep.size() == 1) {
             String tagName = pathDeep.get(0);
-            String value = NBTHelper.NBTTypeToString(n, tagName, type);
+            String value = NBTHelper.NBTTypeToString(n, tagName);
             if (value == null){
                 return null;
             }
-            return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", tagName, value);
+            return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName.isEmpty()?tagName:displayName, value);
         } else {
             String compoundID = pathDeep.get(0);
             pathDeep.remove(0);
-            return getTipFromPathDeep(n.getCompoundTag(compoundID), pathDeep, type);
+            return getTipFromPathDeep(n.getCompoundTag(compoundID), pathDeep, displayName);
         }
     }
 
