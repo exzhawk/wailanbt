@@ -1,0 +1,26 @@
+{
+    "AWWayofTime:divinationSigil":{
+        "containerAltar":{
+            "Amount":"Life Essence",
+            "capacity":"Capacity",
+            "progress":"LP proceed",
+            "liquidRequired":"LP required",
+            "upgradeLevel":"Tier",
+            "capacityMultiplier":"Capacity *",
+            "consumptionMultiplier":"Speed *",
+            "dislocationMultiplier":"Dislocation *",
+            "efficiencyMultiplier":"Efficiency *",
+            "orbCapacityMultiplier":"Orb capacity *",
+            "sacrificeEfficiencyMultiplier":"Sacrifice *",
+            "selfSacrificeEfficiencyMultiplier":"Self-Sacrifice *"
+        },
+        "containerMasterStone":{
+            "currentRitualString":"Ritual ID",
+            "owner":"Ritual Owner"
+        },
+        "containerWritingTable":{
+            "amountUsed":"LP required(*100)",
+            "progress":"Progress(%)"
+        }
+    }
+}

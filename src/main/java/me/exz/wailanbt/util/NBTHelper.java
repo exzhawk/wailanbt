@@ -5,8 +5,13 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public class NBTHelper {
     public static String NBTTypeToString(NBTTagCompound n, String id) {
-        NBTBase tag = n.getTag(id);
-        return tag.toString();
+        if (n.hasKey(id)) {
+            NBTBase tag = n.getTag(id);
+            return tag.toString();
+        }else{
+            return "__ERROR__";
+        }
+
     }
 
     @SuppressWarnings({"UnusedDeclaration", "deprecation"})
@@ -47,6 +52,7 @@ public class NBTHelper {
         }
 
     }
+
     @Deprecated
     public static enum NBTTypeName {
         TAG_End, TAG_Byte, TAG_Short, TAG_Integer, TAG_Long, TAG_Float, TAG_Double, TAG_ByteArray, TAG_String, TAG_List, TAG_Compound, TAG_IntArray, ERROR_VALUE;
