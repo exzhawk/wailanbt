@@ -1,0 +1,22 @@
+{
+    "Botania:twigWand": {
+        "botania:pool": {
+            "mana": "Mana",
+            "manaCap": "Max Mana",
+            "outputting": "Can output"
+        },
+        "botania:spreader": {
+            "mana": "Mana"
+        },
+        "botania:runeAltar": {
+            "mana": "Mana"
+        },
+        "botania:enchanter": {
+            "mana": "Mana",
+            "manaRequired": "Mana Required"
+        },
+        "botania:specialFlower": {
+            "subTileCmp>>>mana": "Mana"
+        }
+    }
+}

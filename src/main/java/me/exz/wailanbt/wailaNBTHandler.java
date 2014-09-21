@@ -24,23 +24,24 @@ public class wailaNBTHandler implements IWailaDataProvider {
     @SuppressWarnings("UnusedDeclaration")
     public static void callbackRegister(IWailaRegistrar registrar) {
         wailaNBTHandler instance = new wailaNBTHandler();
-        registrar.registerSyncedNBTKey("*",Block.class);
+        registrar.registerSyncedNBTKey("*", Block.class);
         registrar.registerBodyProvider(instance, Block.class);
+
     }
 
     private static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
         List<String> tips = new ArrayList<String>();
-            Set<Map.Entry<String, JsonElement>> holdItemA = config.configJson.entrySet();
-            for (Map.Entry<String, JsonElement> holdItem : holdItemA) {
-                Pattern pattern = Pattern.compile(holdItem.getKey());
-                Matcher matcher = pattern.matcher(heldItemName);
-                if (matcher.matches()) {
-                    Set<Map.Entry<String, JsonElement>> teIDA = holdItem.getValue().getAsJsonObject().entrySet();
-                    for (Map.Entry<String, JsonElement> teID : teIDA) {
-                        tips.addAll(getTipsFromNBTWithHeldItem(n, teID.getKey(), teID.getValue()));
-                    }
+        Set<Map.Entry<String, JsonElement>> holdItemA = config.configJson.entrySet();
+        for (Map.Entry<String, JsonElement> holdItem : holdItemA) {
+            Pattern pattern = Pattern.compile(holdItem.getKey());
+            Matcher matcher = pattern.matcher(heldItemName);
+            if (matcher.matches()) {
+                Set<Map.Entry<String, JsonElement>> teIDA = holdItem.getValue().getAsJsonObject().entrySet();
+                for (Map.Entry<String, JsonElement> teID : teIDA) {
+                    tips.addAll(getTipsFromNBTWithHeldItem(n, teID.getKey(), teID.getValue()));
                 }
             }
+        }
 
         return tips;
     }
@@ -68,10 +69,10 @@ public class wailaNBTHandler implements IWailaDataProvider {
         if (pathDeep.size() == 1) {
             String tagName = pathDeep.get(0);
             String value = NBTHelper.NBTTypeToString(n, tagName);
-            if (value == null){
+            if (value == null) {
                 return null;
             }
-            return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName.isEmpty()?tagName:displayName, value);
+            return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName.isEmpty() ? tagName : displayName, value);
         } else {
             String compoundID = pathDeep.get(0);
             pathDeep.remove(0);
@@ -92,19 +93,18 @@ public class wailaNBTHandler implements IWailaDataProvider {
     @Override
     public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
         NBTTagCompound n = accessor.getNBTData();
-        if (n==null){
+        if (n == null) {
             return currenttip;
         }
         EntityPlayer player = accessor.getPlayer();
         ItemStack holdItemReal = player.getHeldItem();
-        String holdItemNameReal="";
-        if (holdItemReal!=null){
+        String holdItemNameReal = "";
+        if (holdItemReal != null) {
             holdItemNameReal = Item.itemRegistry.getNameForObject(holdItemReal.getItem());
         }
         List<String> tips = getTipsFromNBT(n, holdItemNameReal);
         currenttip.addAll(tips);
         return currenttip;
-
     }
 
     @Override
