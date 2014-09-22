@@ -1,49 +1,46 @@
 {
-    "BuildCraft\|.*:wrenchItem": {
-        "net.minecraft.src.buildcraft.energy.TileEngineCreative": {
-            "heat":"Heat",
-            "progress":"Stroke Progress",
-            "energy":"Energy"
+	"BuildCraft\|.*:wrenchItem": {
+        	"net.minecraft.src.buildcraft.energy.TileEngineCreative": {
+            		"heat":"Heat",
+            		"progress":"Stroke Progress",
+            		"energy":"Energy"
         },
-        "net.minecraft.src.buildcraft.factory.TileLaser": {
-            "mjStored": "MJ Stored"
+		"net.minecraft.src.buildcraft.factory.TileLaser": {
+            		"mjStored": "MJ Stored"
         },
 		"net.minecraft.src.buildcraft.factory.TileAssemblyTable": {
-            "energy": "Energy"
-		},
+            		"energy": "Energy"
+	},
 		"net.minecraft.src.buildcraft.factory.TilePump": {
-            "mjStored": "MJ Stored",
+            		"mjStored": "MJ Stored",
 			"tank>>>Amount": "Liquid Amount",
 			"tank>>>FluidName": "Storage Fluid",
 			"tank>>>acceptedFluid": "Input Fluid"
-		},
+	},
 		"net.minecraft.src.buildcraft.factory.TileAssemblyAdvancedWorkbench": {
-            "energy": "Energy"
-		},
+            		"energy": "Energy"
+	},
 		"net.minecraft.src.buildcraft.factory.TileIntegrationTable": {
-            "energy": "Energy"
-		},
+            		"energy": "Energy"
+	},
 		"net.minecraft.src.buildcraft.energy.TileEngineWood": {
-            "heat":"Heat",
-            "progress":"Stroke Progress",
-            "energy":"Energy"
-		},
+            		"heat":"Heat",
+            		"progress":"Stroke Progress",
+            		"energy":"Energy"
+	},
 		"net.minecraft.src.buildcraft.energy.TileEngineStone": {
-            "heat":"Heat",
-            "progress":"Stroke Progress",
-            "energy":"Energy",
+            		"heat":"Heat",
+            		"progress":"Stroke Progress",
+            		"energy":"Energy",
 			"burnTime":"Burn Time",
 			"totalBurnTime":"Total Burn Time"
-		},
+	},
 		"EnergyConverter": {
-            "mjStored":"MJ Stored",
+            		"mjStored":"MJ Stored",
 			"converterMode":"Mode"
-		},
-			"Machine": {
-            "mjStored":"MJ Stored"
-		},
-			"Machine": {
-            "mjStored":"MJ Stored"
-		}
+	},
+		"Machine": {
+            		"mjStored":"MJ Stored"
+	}
     }
 }

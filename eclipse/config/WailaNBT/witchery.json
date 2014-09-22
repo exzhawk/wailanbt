@@ -1,0 +1,35 @@
+{
+    "witchery:witchhand": {
+		"witchery:altar": {
+			"PowerScale":"Power Scale",
+			"RangeScale":"Range Scale",
+			"Power":"Power"
+        },
+		"witchery:spinningwheel": {
+			"CookTime":"Work Time",
+			"PowerLevel":"Power Level"
+		},
+		"witchery:witchesovenidle": {
+			"CookTime":"Work Time",
+			"BurnTime":"Burn Time"
+		},
+		"witchery:distilleryidle": {
+			"CookTime":"Work Time"
+		},
+		"witchery:kettle": {
+			"Amount":"Fluid Amount",
+			"FluidName":"Fluid"
+		},
+		"witchery:brazier": {
+			"CookTime":"Work Time",
+			"PowerLevel":"Power Level",
+			"PowerStorage":"Power Storage"
+		},
+		"witchery:crystalball": {
+			"LastUsedTime":"Last Used Time"
+		},
+		"witchery:leechchest": {
+			"WITCPlayers":"Taglock Player"
+		}
+	}
+}
