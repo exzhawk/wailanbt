@@ -1,0 +1,119 @@
+{
+    "ThermalExpansion:wrench": {
+		"thermalexpansion.DynamoSteam": {
+			"Energy":"Energy",
+			"Fuel":"Fuel",
+			"FuelMax":"Max Fuel",
+			"SteamTank>>>Amount":"Steam Amount",
+			"WaterTank>>>Amount":"Water Amount"
+        },
+		"thermalexpansion.DynamoMagmatic": {
+			"Energy":"Energy",
+			"Fuel":"Fuel"
+		},
+		"thermalexpansion.DynamoCompression": {
+			"Energy":"Energy",
+			"Fuel":"Fuel",
+			"Coolant":"Coolant",
+			"FuelTank>>>Amount":"Fuel Amount",
+			"CoolantTank>>>Amount":"Coolant Amount"
+		},
+		"thermalexpansion.DynamoReactant": {
+			"Energy":"Energy",
+			"Fuel":"Fuel",
+			"React":"React",
+			"ReactMax":"Max React"
+		},
+		"thermalexpansion.DynamoEnervation": {
+			"Energy":"Energy",
+			"Fuel":"Fuel",
+			"FuelMax":"Max Fuel"
+		},
+		"thermalexpansion.Cell": {
+			"Energy":"Energy",
+			"Recv":"Max Input",
+			"Send":"Max Output"
+		},
+		"thermalexpansion.CellCreative": {
+			"Energy":"Energy",
+			"Recv":"Max Input",
+			"Send":"Max Output"
+		},
+		"thermalexpansion.Tank": {
+			"FluidName":"Fluid",
+			"Amount":"Fluid Amount"
+		},
+		"thermalexpansion.TankCreative": {
+			"FluidName":"Fluid",
+			"Amount":"Fluid Amount"
+		},
+		"thermalexpansion.Sponge": {
+			"FluidName":"Fluid"
+		},
+		"thermalexpansion.Furnace": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress"
+		},
+		"thermalexpansion.Pulverizer": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress"
+		},
+		"thermalexpansion.Sawmill": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress"
+		},
+		"thermalexpansion.Smelter": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress"
+		},
+		"thermalexpansion.Crucible": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress"
+		},
+		"thermalexpansion.Transposer": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress",
+			"Rev":"Fluid Receive"
+		},
+		"thermalexpansion.Precipitator": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress",
+			"Amount":"Fluid Amount"
+		},
+		"thermalexpansion.Extruder": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress",
+			"ColdTank>>>Amount":"Water Amount",
+			"HotTank>>>Amount":"Lava Amount"
+		},
+		"thermalexpansion.Accumulator": {
+			"Amount":"Water Amount"
+		},
+		"thermalexpansion.Assembler": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress",
+			"Amount":"Fluid Amount"
+		},
+		"thermalexpansion.Charger": {
+			"Energy":"Energy",
+			"ProcMax":"Work Speed",
+			"ProcRem":"Work Progress"
+		},
+		"thermalexpansion.Activator": {
+			"LeftClick":"Left Click",
+			"Sneaking":"Sneaking"
+		},
+		"thermalexpansion.Tesseract": {
+			"Frequency":"Frequency"
+		}
+	}
+}
