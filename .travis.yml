@@ -1,4 +1,4 @@
 language: java
-script: chmod 777 gradlew
+before_script: chmod 777 gradlew
 script: ./gradlew setupCIWorkspace
 script: ./gradlew build
