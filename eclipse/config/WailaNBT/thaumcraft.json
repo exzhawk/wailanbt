@@ -1,0 +1,48 @@
+{
+    "Thaumcraft:WandCasting": {
+		"TileInfusionStone": {
+			"instability":"Instability"
+        },
+		"TileAlchemyFurnace": {
+			"BurnTime":"Burn Time",
+			"CookTime":"Work Time",
+			"Vis":"Vis Amount"
+		},
+		"TileJar": {
+			"Amount":"Vis Amount"
+		},
+		"TileSiphon": {
+			"amount":"Vis Amount"
+		},
+		"TileTubeRestrict": {
+			"amount":"Vis Amount"
+		},
+		"TileTubeFilter": {
+			"amount":"Vis Amount"
+		},
+		"TileTubeValve": {
+			"amount":"Vis Amount",
+			"flow":"Open"
+		},
+		"TileTubeOneway": {
+			"amount":"Vis Amount"
+		},
+		"TileTube": {
+			"amount":"Vis Amount"
+		},
+		"TileCrucible": {
+			"Amount":"Water Amount",
+			"Heat":"Heat"
+		},
+		"TileMirror": {
+			"linked":"Linked",
+			"instability":"Instability"
+		},
+		"TileJarBrain": {
+			"XP":"XP Storage"
+		},
+		"TileArcaneFurnace": {
+			"CookTime":"Work Time",
+		}
+	}
+}
