@@ -4,7 +4,7 @@
 			"experienceLevel":"Experience Level",
 			"experienceTotal":"Experience",
 			"fuelTank>>>Amount":"Nutrient Amount"
-        },
+               },
 		"blockZombieGeneratorTileEntity": {
 			"fuelTank>>>Amount":"Nutrient Amount"
 		},
