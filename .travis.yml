@@ -1,0 +1,4 @@
+language: java
+chmod 777 gradlew
+./gradlew setupCIWorkspace
+./gradlew build
