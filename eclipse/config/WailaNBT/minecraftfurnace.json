@@ -1,0 +1,8 @@
+{
+"minecraft:torch": {
+"Furnace": {
+"BurnTime":"Burn Time",
+"CookTime":"Cook Time"
+ }
+ }
+ }
