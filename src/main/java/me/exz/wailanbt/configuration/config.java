@@ -5,8 +5,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import me.exz.wailanbt.reference.Reference;
 import me.exz.wailanbt.util.LogHelper;
-
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Map;
 import java.util.Set;
 
@@ -54,10 +56,12 @@ public class config {
                         LogHelper.error("Parse " + configFile.toString() + " failed");
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    //e.printStackTrace();
+                    LogHelper.error("Error parsing file '"+configFile.getName()+"'. Possible error: "+ e.getCause().getMessage());
                 }
             }
         }
+        System.out.println(configJson);
         LogHelper.info("Config Loaded");
     }
 
@@ -65,7 +69,17 @@ public class config {
         Set<Map.Entry<String, JsonElement>> holdItemA = jsonObjectCurrent.entrySet();
         try {
             for (Map.Entry<String, JsonElement> holdItem : holdItemA) {
-                if (!configJson.has(holdItem.getKey())) {
+                if (configJson.has(holdItem.getKey())) {
+                    JsonObject configJsonHoldItem = configJson.get(holdItem.getKey()).getAsJsonObject();
+                    Set<Map.Entry<String, JsonElement>> teA = holdItem.getValue().getAsJsonObject().entrySet();
+                    for(Map.Entry<String, JsonElement> te:teA){
+if (!configJsonHoldItem.has(te.getKey())){
+    configJsonHoldItem.add(te.getKey(),te.getValue());
+}
+                    }
+                    configJson.remove(holdItem.getKey());
+                    configJson.add(holdItem.getKey(),configJsonHoldItem);
+                }else{
                     configJson.add(holdItem.getKey(), holdItem.getValue());
                 }
             }
