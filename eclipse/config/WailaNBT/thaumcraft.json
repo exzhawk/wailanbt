@@ -42,7 +42,7 @@
 			"XP":"XP Storage"
 		},
 		"TileArcaneFurnace": {
-			"CookTime":"Work Time",
+			"CookTime":"Work Time"
 		}
 	}
 }
