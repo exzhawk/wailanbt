@@ -1,0 +1,47 @@
+{
+    "EnderIO:itemYetaWrench": {
+		"blockKillerJoeTileEntity": {
+			"experienceLevel":"Experience Level",
+			"experienceTotal":"Experience",
+			"fuelTank>>>Amount":"Nutrient Amount"
+        },
+		"blockZombieGeneratorTileEntity": {
+			"fuelTank>>>Amount":"Nutrient Amount"
+		},
+		"blockPoweredSpawnerTileEntity": {
+			"currentTask>>>chance":"Spawn Chance",
+			"EntityId":"Entity ID",
+			"currentTask>>>usedEnergy":"Used Energy",
+			"SpawnRange":"Spawn Range",
+			"RequiredPlayerRange":"Required Player Range"
+		},
+		"blockTankTileEntity": {
+			"tankContents>>>Amount":"Fluid Amount",
+			"tankContents>>>FluidName":"Fluid"
+		},
+		"blockStirlingGeneratorTileEntity": {
+			"burnTime":"Burn Time",
+			"totalBurnTime":"Total Burn Time"
+		},
+		"blockCombustionGeneratorTileEntity": {
+			"coolantTank>>>Amount":"Coolant Amount",
+			"fuelTank>>>Amount":"Fuel Amount"
+		},
+		"blockSagMillTileEntity": {
+			"currentTask>>>usedEnergy":"Used Energy"
+		},
+		"blockAlloySmelterTileEntity": {
+			"currentTask>>>usedEnergy":"Used Energy"
+		},
+		"blockVatTileEntity": {
+			"currentTask>>>usedEnergy":"Used Energy",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"blockPowerMonitorTileEntity": {
+			"powerInCapBanks":"Power In Capacitor Banks",
+			"powerInConduits":"Power In Conduits",
+			"powerInMachines":"Power In Machines"
+		}
+	}
+}
