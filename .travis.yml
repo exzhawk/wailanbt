@@ -1,3 +1,4 @@
 language: java
-script: gradle setupCIWorkspace
-script: gradle build
+install: "chmod +x gradlew"
+script: ./gradlew setupCIWorkspace
+script: ./gradlew build
