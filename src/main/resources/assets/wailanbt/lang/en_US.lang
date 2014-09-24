@@ -1,2 +1,6 @@
-wailanbt.info.reload=Waila NBT configuration reloaded.
-wailanbt.info.notholding=You must hold something!
+wailanbt.info.NotHolding=[WailaNBT] You must hold something!
+wailanbt.info.CreateEmptyConfig=[WailaNBT] Can't find config files, empty config created.
+wailanbt.info.FailCreateEmptyConfig=[WailaNBT] Failed to create empty config file.
+wailanbt.info.JsonContentError=[WailaNBT] Failed to recognize file %s as config file.
+wailanbt.info.ParsingError=[WailaNBT] Failed to parsing file %s as json file.
+wailanbt.info.ConfigLoaded=[WailaNBT] Config loading completed.

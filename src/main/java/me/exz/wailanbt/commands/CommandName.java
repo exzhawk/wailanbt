@@ -29,7 +29,7 @@ public class CommandName extends CommandBase {
         EntityPlayer player = (EntityPlayer) sender;
         ItemStack holdItem = player.getHeldItem();
         if (holdItem == null) {
-            player.addChatComponentMessage(new ChatComponentTranslation("wailanbt.info.notholding"));
+            player.addChatComponentMessage(new ChatComponentTranslation("wailanbt.info.NotHolding"));
             return;
         }
         player.addChatComponentMessage(new ChatComponentText(Item.itemRegistry.getNameForObject(holdItem.getItem())));

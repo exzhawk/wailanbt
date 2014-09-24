@@ -4,6 +4,7 @@ import cpw.mods.fml.common.FMLLog;
 import me.exz.wailanbt.reference.Reference;
 import org.apache.logging.log4j.Level;
 
+@SuppressWarnings("UnusedDeclaration")
 public class LogHelper {
     private static void log(Level logLevel, Object object)
     {
