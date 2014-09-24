@@ -2,15 +2,37 @@ package me.exz.wailanbt.util;
 
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
+import org.apache.commons.lang3.StringUtils;
+
 
 public class NBTHelper {
     public static String NBTTypeToString(NBTTagCompound n, String id) {
         if (n.hasKey(id)) {
             NBTBase tag = n.getTag(id);
-            return tag.toString();
-        }else{
+            switch (tag.getId()) {
+                case 0:
+                case 3:
+                case 7:
+                case 9:
+                case 10:
+                case 11:
+                    return tag.toString();
+                case 1:
+                case 2:
+                case 4:
+                case 5:
+                case 6:
+                    return StringUtils.substring(tag.toString(), 0, -1);
+                case 8:
+                    return StringUtils.substring(tag.toString(), 1, -1);
+                default:
+                    return "__ERROR__";
+
+            }
+        } else {
             return "__ERROR__";
         }
+
 
     }
 
