@@ -3,7 +3,7 @@
 		"Generator": {
 			"fuel":"Fuel Remain",
 			"storage":"Energy Storage"
-      },
+      		},
 		"Geothermal Generator": {
 			"fluidTank>>>Amount":"Lava Amount",
 			"storage":"Energy Storage"
@@ -11,10 +11,10 @@
 		"Water Mill": {
 			"fuel":"Water Remain",
 			"storage":"Energy Storage"
-      },
+		 },
 		"Solar Panel": {
 			"storage":"Energy Storage"
-       },
+		 },
 		"Wind Mill": {
 			"storage":"Energy Storage"
 		},
