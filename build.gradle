@@ -45,11 +45,11 @@ dependencies {
 
 repositories {
     maven {
-        name "Mobius Repo"
+        name "ProfMobius"
         url "http://mobiusstrip.eu/maven"
     }
     maven {
-        name 'CB Repo'
+        name 'ChickenBones'
         url "http://chickenbones.net/maven/"
     }
 }
