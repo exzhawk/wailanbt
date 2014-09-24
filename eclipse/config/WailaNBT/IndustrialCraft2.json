@@ -1,0 +1,271 @@
+{
+    ".*": {
+		"Generator": {
+			"fuel":"Fuel Remain",
+			"storage":"Energy Storage"
+      },
+		"Geothermal Generator": {
+			"fluidTank>>>Amount":"Lava Amount",
+			"storage":"Energy Storage"
+	  	},
+		"Water Mill": {
+			"fuel":"Water Remain",
+			"storage":"Energy Storage"
+      },
+		"Solar Panel": {
+			"storage":"Energy Storage"
+       },
+		"Wind Mill": {
+			"storage":"Energy Storage"
+		},
+		"Nuclear Reactor": {
+			"heat":"Heat",
+			"output":"Energy Output"
+		},
+		"Radioisotope Thermoelectric Generator": {
+			"fuel":"Fuel Remain",
+			"storage":"Energy Storage"
+		},
+		"Semifluid Generator": {
+			"storage":"Energy Storage",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Stirling Generator": {
+			"EUstorage":"EU Storage"
+		},
+		"Kinetic Generator": {
+			"EUstorage":"EU Storage"
+		},
+		"Luminator": {
+			"energy":"Energy"
+		},
+		"Luminator": {
+			"energy":"Energy Storage"
+		},
+		"Tesla Coil": {
+			"energy":"Energy Storage"
+		},
+		"Crop-Matron": {
+			"energy":"Energy Storage",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Thermal Centrifuge": {
+			"energy":"Energy Storage",
+			"heat":"Heat",
+			"progress":"Progress"
+		},
+		"Metal Former": {
+			"energy":"Energy Storage",
+			"mode":"Mode",
+			"progress":"Progress"
+		},
+		"Ore Washing Plant": {
+			"energy":"Energy Storage",
+			"progress":"Progress",
+			"fluidTank>>>Amount":"Water Amount"
+		},
+		"Scanner": {
+			"energy":"Energy Storage",
+			"progress":"Progress",
+			"state":"State"
+		},
+		"Replicator": {
+			"energy":"Energy Storage",
+			"uuProcessed":"UU Processed",
+			"fluidTank>>>Amount":"UU Amount",
+			"extraUuStored":"Extra UU Storage"
+		},
+		"Solid Canner Maschine": {
+			"energy":"Energy Storage",
+			"progress":"Progress"
+		},
+		"Fluid Bottler Maschine": {
+			"energy":"Energy Storage",
+			"progress":"Progress",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Advanced Miner": {
+			"energy":"Energy Storage",
+			"silktouch":"Silk Touch",
+			"minelayer":"Mining Layer"
+		},
+		"Liquid Heat Exchanger": {
+			"HeatBuffer":"Heat Buffer",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Fermenter": {
+			"HeatBuffer":"Heat Buffer",
+			"progress":"Progress",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Fluid Regulator": {
+			"energy":"Energy Storage",
+			"outputmb":"Output Amount",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Condenser": {
+			"energy":"Energy Storage",
+			"progress":"Progress",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Fermenter": {
+			"HeatBuffer":"Heat Buffer",
+			"progress":"Progress",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Steam Generator": {
+			"calcification":"Calcification",
+			"pressurevalve":"Pressure Valve",
+			"systemheat":"System Heat"
+		},
+		"Blast Furnace": {
+			"heat":"Heat",
+			"progress":"Progress"
+		},
+		"Block Cutter": {
+			"energy":"Energy Storage",
+			"progress":"Progress"
+		},
+		"Solar Destiller": {
+			"inputTank>>>Amount":"Water Amount",
+			"outputTank>>>Amount":"Distilled Water Amount"
+		},
+		"Fluid Distributor": {
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Sorting Machine": {
+			"energy":"Energy Storage"
+		},
+		"Crop Havester": {
+			"energy":"Energy Storage"
+		},
+		"Chargepad BatBox": {
+			"energy":"Energy Storage"
+		},
+		"Chargepad CESU": {
+			"energy":"Energy Storage"
+		},
+		"Chargepad MFE": {
+			"energy":"Energy Storage"
+		},
+		"Chargepad MFSU": {
+			"energy":"Energy Storage"
+		},
+		"Chargepad MFSU": {
+			"energy":"Energy Storage"
+		},
+		"Steam Kinetic Generator": {
+			"condensationprogress":"Condensation Progress",
+			"distilledwaterTank>>>Amount":"Distilled Water Amount"
+		},
+		"Solid Heat Generator": {
+			"HeatBuffer":"Heat Buffer",
+			"fuel":"Fuel Remain"
+		},
+		"Fluid Heat Generator": {
+			"HeatBuffer":"Heat Buffer",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Radioisotope Thermo Heat Generator": {
+			"HeatBuffer":"Heat Buffer"
+		},
+		"Electric Heat Generator": {
+			"HeatBuffer":"Heat Buffer",
+			"energy":"Energy Storage"
+		},
+		"Iron Furnace": {
+			"progress":"Progress",
+			"fuel":"Fuel Remain",
+			"maxFuel":"Max Fuel"
+		},
+		"Electric Furnace": {
+			"progress":"Progress",
+			"energy":"Energy Storage"
+		},
+		"Macerator": {
+			"progress":"Progress",
+			"energy":"Energy Storage"
+		},
+		"Extractor": {
+			"progress":"Progress",
+			"energy":"Energy Storage"
+		},
+		"Compressor": {
+			"progress":"Progress",
+			"energy":"Energy Storage"
+		},
+		"Canning Machine": {
+			"progress":"Progress",
+			"energy":"Energy Storage",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Miner": {
+			"progress":"Progress",
+			"energy":"Energy Storage"
+		},
+		"Pump": {
+			"progress":"Progress",
+			"energy":"Energy Storage",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Magnetizer": {
+			"energy":"Energy Storage"
+		},
+		"Electrolyzer": {
+			"energy":"Energy Storage"
+		},
+		"Recycler": {
+			"progress":"Progress",
+			"energy":"Energy Storage"
+		},
+		"Induction Furnace": {
+			"progress":"Progress",
+			"energy":"Energy Storage",
+			"heat":"Heat"
+		},
+		"Mass Fabricator": {
+			"energy":"Energy Storage",
+			"scrap":"Scrap",
+			"fluidTank>>>Amount":"UU Amount"
+		},
+		"Terraformer": {
+			"energy":"Energy Storage"
+		},
+		"LV-Transformer": {
+			"energy":"Energy Storage"
+		},
+		"MV-Transformer": {
+			"energy":"Energy Storage"
+		},
+		"HV-Transformer": {
+			"energy":"Energy Storage"
+		},
+		"EV-Transformer": {
+			"energy":"Energy Storage"
+		},
+		"CESU": {
+			"energy":"Energy Storage"
+		},
+		"MFE": {
+			"energy":"Energy Storage"
+		},
+		"MFSU": {
+			"energy":"Energy Storage"
+		},
+		"BatBox": {
+			"energy":"Energy Storage"
+		},
+		"BatBox": {
+			"energy":"Energy Storage"
+		},
+		"TECrop": {
+			"size":"Growth Size",
+			"growthPoints":"Growth Points"
+		}
+	}
+}
