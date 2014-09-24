@@ -1,5 +1,5 @@
 {
-    "witchery:witchhand": {
+    ".*": {
 		"witchery:altar": {
 			"PowerScale":"Power Scale",
 			"RangeScale":"Range Scale",
