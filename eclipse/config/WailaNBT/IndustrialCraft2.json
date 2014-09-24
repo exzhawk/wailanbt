@@ -39,9 +39,6 @@
 		"Luminator": {
 			"energy":"Energy"
 		},
-		"Luminator": {
-			"energy":"Energy Storage"
-		},
 		"Tesla Coil": {
 			"energy":"Energy Storage"
 		},
@@ -111,12 +108,6 @@
 			"inputTank>>>Amount":"Input Fluid Amount",
 			"outputTank>>>Amount":"Output Fluid Amount"
 		},
-		"Fermenter": {
-			"HeatBuffer":"Heat Buffer",
-			"progress":"Progress",
-			"inputTank>>>Amount":"Input Fluid Amount",
-			"outputTank>>>Amount":"Output Fluid Amount"
-		},
 		"Steam Generator": {
 			"calcification":"Calcification",
 			"pressurevalve":"Pressure Valve",
@@ -150,9 +141,6 @@
 			"energy":"Energy Storage"
 		},
 		"Chargepad MFE": {
-			"energy":"Energy Storage"
-		},
-		"Chargepad MFSU": {
 			"energy":"Energy Storage"
 		},
 		"Chargepad MFSU": {
@@ -255,9 +243,6 @@
 			"energy":"Energy Storage"
 		},
 		"MFSU": {
-			"energy":"Energy Storage"
-		},
-		"BatBox": {
 			"energy":"Energy Storage"
 		},
 		"BatBox": {
