@@ -17,8 +17,7 @@
 			"CookTime":"Work Time"
 		},
 		"witchery:kettle": {
-			"Amount":"Fluid Amount",
-			"FluidName":"Fluid"
+			"Amount":"Fluid Amount"
 		},
 		"witchery:brazier": {
 			"CookTime":"Work Time",
