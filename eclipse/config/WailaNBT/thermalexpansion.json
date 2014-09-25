@@ -1,5 +1,5 @@
 {
-    "ThermalExpansion:wrench": {
+    ".*": {
 		"thermalexpansion.DynamoSteam": {
 			"Energy":"Energy",
 			"Fuel":"Fuel",

@@ -37,7 +37,7 @@
 			"EUstorage":"EU Storage"
 		},
 		"Luminator": {
-			"energy":"Energy"
+			"energy":"Energy Storage"
 		},
 		"Tesla Coil": {
 			"energy":"Energy Storage"
@@ -251,6 +251,13 @@
 		"TECrop": {
 			"size":"Growth Size",
 			"growthPoints":"Growth Points"
+		},
+				"Energy-O-Mat": {
+			"euOffer":"EU Offer",
+			"ownerGameProfile>>>Name":"Owner"
+		},
+		"Trade-O-Mat": {
+			"ownerGameProfile>>>Name":"Owner"
 		}
 	}
 }

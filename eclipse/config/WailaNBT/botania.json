@@ -1,5 +1,5 @@
 {
-    "Botania:twigWand": {
+    ".*": {
         "botania:pool": {
             "mana": "Mana",
             "manaCap": "Max Mana",
@@ -17,6 +17,12 @@
         },
         "botania:specialFlower": {
             "subTileCmp>>>mana": "Mana"
+        },
+		"botania:rfGenerator": {
+            "mana": "Mana"
+        },
+		"botania:spawnerClaw": {
+            "mana": "Mana"
         }
     }
 }

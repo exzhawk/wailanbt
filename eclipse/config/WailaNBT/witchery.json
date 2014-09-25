@@ -4,7 +4,7 @@
 			"PowerScale":"Power Scale",
 			"RangeScale":"Range Scale",
 			"Power":"Power"
-        },
+		},
 		"witchery:spinningwheel": {
 			"CookTime":"Work Time",
 			"PowerLevel":"Power Level"
@@ -17,16 +17,12 @@
 			"CookTime":"Work Time"
 		},
 		"witchery:kettle": {
-			"Amount":"Fluid Amount",
-			"FluidName":"Fluid"
+			"Amount":"Fluid Amount"
 		},
 		"witchery:brazier": {
 			"CookTime":"Work Time",
 			"PowerLevel":"Power Level",
 			"PowerStorage":"Power Storage"
-		},
-		"witchery:crystalball": {
-			"LastUsedTime":"Last Used Time"
 		},
 		"witchery:leechchest": {
 			"WITCPlayers":"Taglock Player"

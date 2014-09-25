@@ -1,0 +1,154 @@
+{
+    ".*": {
+        "HeatGenerator": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"lavaTank>>>Amount":"Lava Amount"
+        },
+		"SolarGenerator": {
+            "electricityStored":"Stored Energy"
+        },
+		"GasGenerator": {
+            "electricityStored":"Stored Energy",
+			"fuelTank>>>stored>>>amount":"Fuel Amount"
+        },
+		"BioGenerator": {
+            "electricityStored":"Stored Energy",
+			"bioFuelStored":"Fuel Amount"
+        },
+		"AdvancedSolarGenerator": {
+            "electricityStored":"Stored Energy"
+        },
+		"WindTurbine": {
+            "electricityStored":"Stored Energy"
+        },
+		"EnrichmentChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"OsmiumCompressor": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"Combiner": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"Crusher": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"SmeltingFactory": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"AdvancedSmeltingFactory": {
+            "electricityStored":"Stored Energy"
+        },
+		"UltimateSmeltingFactory": {
+            "electricityStored":"Stored Energy"
+        },
+		"MetallurgicInfuser": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"PurificationChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"EnergizedSmelter": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"MekanismTeleporter": {
+            "electricityStored":"Stored Energy"
+        },
+		"ElectricPump": {
+            "electricityStored":"Stored Energy",
+			"fluidTank>>>Amount":"Fluid Amount"
+        },
+		"ElectricChest": {
+            "electricityStored":"Stored Energy"
+        },
+		"Chargepad": {
+            "electricityStored":"Stored Energy"
+        },
+		"LogisticalSorter": {
+            "electricityStored":"Stored Energy"
+        },
+		"EnergyCube": {
+            "electricityStored":"Stored Energy"
+        },
+		"SalinationController": {
+            "temperature":"Temperature",
+			"operatingTicks":"Progress",
+			"brineTank>>>Amount":"Brine Amount",
+			"waterTank>>>Amount":"Water Amount"
+        },
+		"RotaryCondensentrator": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"gasTank>>>Amount":"Gas Amount"
+        },
+		"ChemicalOxidizer": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"gasTank>>>stored>>>amount":"Gas Amount"
+        },
+		"ChemicalInfuser": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"leftTank>>>stored>>>amount":"Left Gas Amount",
+			"rightTank>>>stored>>>amount":"Right Gas Amount",
+			"centerTank>>>stored>>>amount":"Center Gas Amount"
+        },
+		"ChemicalInjectionChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"ElectrolyticSeparator": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"fluidTank>>>Amount":"Fluid Amount",
+			"leftTank>>>stored>>>amount":"Left Gas Amount",
+			"rightTank>>>stored>>>amount":"Right Gas Amount"
+        },
+		"PrecisionSawmill": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"ChemicalDissolutionChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"gasTank>>>stored>>>amount":"Gas Amount",
+			"injectTank>>>stored>>>amount":"Inject Gas Amount"
+        },
+		"ChemicalWasher": {
+            "electricityStored":"Stored Energy",
+			"leftTank>>>Amount":"Water Amount",
+			"centerTank>>>stored>>>amount":"Left Gas Amount",
+			"rightTank>>>stored>>>amount":"Right Gas Amount"
+        },
+		"ChemicalCrystallizer": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"rightTank>>>stored>>>amount":"Gas Amount"
+        },
+		"SeismicVibrator": {
+            "electricityStored":"Stored Energy"
+        },
+		"PressurizedReactionChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"inputFluidTank>>>Amount":"Input Fluid Amount",
+			"inputGasTank>>>Amount":"Input Gas Amount",
+			"outputGasTank>>>Amount":"Output Gas Amount"
+        },
+		"PortableTank": {
+            "fluidTank>>>Amount":"Fluid Amount"
+        },
+		"FluidicPlenisher": {
+            "fluidTank>>>Amount":"Fluid Amount"
+		}
+	}
+}

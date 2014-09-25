@@ -1,15 +1,16 @@
 {
-    "Thaumcraft:WandCasting": {
+    ".*": {
 		"TileInfusionStone": {
 			"instability":"Instability"
-        },
+	      },
 		"TileAlchemyFurnace": {
 			"BurnTime":"Burn Time",
 			"CookTime":"Work Time",
 			"Vis":"Vis Amount"
 		},
 		"TileJar": {
-			"Amount":"Vis Amount"
+			"Amount":"Vis Amount",
+			"Aspect":"Aspect"
 		},
 		"TileSiphon": {
 			"amount":"Vis Amount"
