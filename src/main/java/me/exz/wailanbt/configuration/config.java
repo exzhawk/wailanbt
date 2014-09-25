@@ -19,6 +19,7 @@ import java.util.Set;
 
 public class config {
     public static JsonObject configJson;
+    public static File modConfigurationDirectory;
     private static File configDir;
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
