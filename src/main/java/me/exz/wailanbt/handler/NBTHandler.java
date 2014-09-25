@@ -1,35 +1,20 @@
-package me.exz.wailanbt;
-
+package me.exz.wailanbt.handler;
 
 import com.google.gson.JsonElement;
-import mcp.mobius.waila.api.IWailaConfigHandler;
-import mcp.mobius.waila.api.IWailaDataAccessor;
-import mcp.mobius.waila.api.IWailaDataProvider;
-import mcp.mobius.waila.api.IWailaRegistrar;
 import me.exz.wailanbt.configuration.config;
 import me.exz.wailanbt.util.NBTHelper;
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static mcp.mobius.waila.api.SpecialChars.*;
+import static mcp.mobius.waila.api.SpecialChars.ALIGNRIGHT;
+import static mcp.mobius.waila.api.SpecialChars.TAB;
+import static mcp.mobius.waila.api.SpecialChars.WHITE;
 
-public class wailaNBTHandler implements IWailaDataProvider {
-    @SuppressWarnings("UnusedDeclaration")
-    public static void callbackRegister(IWailaRegistrar registrar) {
-        wailaNBTHandler instance = new wailaNBTHandler();
-        registrar.registerSyncedNBTKey("*", Block.class);
-        registrar.registerBodyProvider(instance, Block.class);
-
-    }
-
-    private static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
+public class NBTHandler {
+    protected static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
         List<String> tips = new ArrayList<String>();
         Set<Map.Entry<String, JsonElement>> holdItemA = config.configJson.entrySet();
         for (Map.Entry<String, JsonElement> holdItem : holdItemA) {
@@ -88,37 +73,4 @@ public class wailaNBTHandler implements IWailaDataProvider {
             return getTipFromPathDeep(n.getCompoundTag(compoundID), pathDeep, displayName);
         }
     }
-
-    @Override
-    public ItemStack getWailaStack(IWailaDataAccessor accessor, IWailaConfigHandler config) {
-        return null;
-    }
-
-    @Override
-    public List<String> getWailaHead(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
-        return currenttip;
-    }
-
-    @Override
-    public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
-        NBTTagCompound n = accessor.getNBTData();
-        if (n == null) {
-            return currenttip;
-        }
-        EntityPlayer player = accessor.getPlayer();
-        ItemStack holdItemReal = player.getHeldItem();
-        String holdItemNameReal = "";
-        if (holdItemReal != null) {
-            holdItemNameReal = Item.itemRegistry.getNameForObject(holdItemReal.getItem());
-        }
-        List<String> tips = getTipsFromNBT(n, holdItemNameReal);
-        currenttip.addAll(tips);
-        return currenttip;
-    }
-
-    @Override
-    public List<String> getWailaTail(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
-        return currenttip;
-    }
-
 }

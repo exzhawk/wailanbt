@@ -26,7 +26,7 @@ public class WailaNBT {
     @SideOnly(Side.CLIENT)
     @Mod.EventHandler
     public void init(@SuppressWarnings("UnusedParameters") FMLInitializationEvent event) {
-        FMLInterModComms.sendMessage("Waila", "register", "me.exz.wailanbt.wailaNBTHandler.callbackRegister");
+        FMLInterModComms.sendMessage("Waila", "register", "me.exz.wailanbt.handler.BlockHandler.callbackRegister");
         ClientCommandHandler.instance.registerCommand(new CommandReload());
         ClientCommandHandler.instance.registerCommand(new CommandName());
         MinecraftForge.EVENT_BUS.register(new ConfigEvent());
