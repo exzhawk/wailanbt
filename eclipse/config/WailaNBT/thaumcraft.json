@@ -1,5 +1,5 @@
 {
-    "Thaumcraft:WandCasting": {
+    ".*": {
 		"TileInfusionStone": {
 			"instability":"Instability"
         },
