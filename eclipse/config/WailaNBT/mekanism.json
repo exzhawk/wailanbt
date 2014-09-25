@@ -123,7 +123,7 @@
 			"gasTank>>>stored>>>amount":"Gas Amount",
 			"injectTank>>>stored>>>amount":"Inject Gas Amount"
         },
-		"ChemicalWaher": {
+		"ChemicalWasher": {
             "electricityStored":"Stored Energy",
 			"leftTank>>>Amount":"Water Amount",
 			"centerTank>>>stored>>>amount":"Left Gas Amount",
@@ -149,6 +149,6 @@
         },
 		"FluidicPlenisher": {
             "fluidTank>>>Amount":"Fluid Amount"
-        }
-	  }
+		}
+	}
 }
