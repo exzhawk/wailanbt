@@ -17,6 +17,12 @@
         },
         "botania:specialFlower": {
             "subTileCmp>>>mana": "Mana"
+        },
+		"botania:rfGenerator": {
+            "mana": "Mana"
+        },
+		"botania:spawnerClaw": {
+            "mana": "Mana"
         }
     }
 }
