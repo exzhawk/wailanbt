@@ -14,6 +14,8 @@ import static mcp.mobius.waila.api.SpecialChars.TAB;
 import static mcp.mobius.waila.api.SpecialChars.WHITE;
 
 public class NBTHandler {
+    protected static byte flag = 0;//0 for block; 1 for entity
+    protected static String id = "";
     protected static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
         List<String> tips = new ArrayList<String>();
         Set<Map.Entry<String, JsonElement>> holdItemA = config.configJson.entrySet();
@@ -33,7 +35,7 @@ public class NBTHandler {
 
     private static List<String> getTipsFromNBTWithHeldItem(NBTTagCompound n, String teID, JsonElement teEntry) {
         List<String> tips = new ArrayList<String>();
-        String teIDReal = n.getString("id");
+        String teIDReal = id;
         Pattern pattern = Pattern.compile(teID);
         Matcher matcher = pattern.matcher(teIDReal);
         if (matcher.matches()) {

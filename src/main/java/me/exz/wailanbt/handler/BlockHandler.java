@@ -42,6 +42,8 @@ public class BlockHandler implements IWailaDataProvider {
         if (holdItemReal != null) {
             holdItemNameReal = Item.itemRegistry.getNameForObject(holdItemReal.getItem());
         }
+        NBTHandler.flag=0;
+        NBTHandler.id =n.getString("id");
         List<String> tips = NBTHandler.getTipsFromNBT(n, holdItemNameReal);
         currenttip.addAll(tips);
         return currenttip;
