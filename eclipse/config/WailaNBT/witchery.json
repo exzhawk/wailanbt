@@ -25,9 +25,6 @@
 			"PowerLevel":"Power Level",
 			"PowerStorage":"Power Storage"
 		},
-		"witchery:crystalball": {
-			"LastUsedTime":"Last Used Time"
-		},
 		"witchery:leechchest": {
 			"WITCPlayers":"Taglock Player"
 		}
