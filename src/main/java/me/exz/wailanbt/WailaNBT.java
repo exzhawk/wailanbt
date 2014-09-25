@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import me.exz.wailanbt.commands.CommandEntity;
 import me.exz.wailanbt.commands.CommandName;
 import me.exz.wailanbt.commands.CommandReload;
 import me.exz.wailanbt.configuration.ConfigEvent;
@@ -30,6 +31,7 @@ public class WailaNBT {
         FMLInterModComms.sendMessage("Waila", "register", "me.exz.wailanbt.handler.EntityHandler.callbackRegister");
         ClientCommandHandler.instance.registerCommand(new CommandReload());
         ClientCommandHandler.instance.registerCommand(new CommandName());
+        ClientCommandHandler.instance.registerCommand(new CommandEntity());
         MinecraftForge.EVENT_BUS.register(new ConfigEvent());
     }
 }

@@ -14,7 +14,7 @@ import static mcp.mobius.waila.api.SpecialChars.TAB;
 import static mcp.mobius.waila.api.SpecialChars.WHITE;
 
 public class NBTHandler {
-    protected static byte flag = 0;//0 for block; 1 for entity
+    protected static byte flag;//0 for block; 1 for entity
     protected static String id = "";
     protected static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
         List<String> tips = new ArrayList<String>();
