@@ -1,5 +1,5 @@
 {
-    "Botania:twigWand": {
+    ".*": {
         "botania:pool": {
             "mana": "Mana",
             "manaCap": "Max Mana",
