@@ -1,2 +1,6 @@
-wailanbt.info.reload=Waila NBT配置已更新
-wailanbt.info.notholding=你必须手持用来检测数据的物品!
+wailanbt.info.NotHolding=[WailaNBT] 你必须手持一件物品!
+wailanbt.info.CreateEmptyConfig=[WailaNBT] 未找到配置文件, 已创建default.json在config目录下
+wailanbt.info.FailCreateEmptyConfig=[WailaNBT] 创建default.json失败
+wailanbt.info.JsonContentError=[WailaNBT] %s 不是有效的配置文件
+wailanbt.info.ParsingError=[WailaNBT] %s 不是有效的JSON文件
+wailanbt.info.ConfigLoaded=[WailaNBT] 配置文件载入成功
