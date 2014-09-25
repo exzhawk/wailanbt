@@ -1,5 +1,5 @@
 {
-    "EnderIO:itemYetaWrench": {
+    ".*": {
 		"blockKillerJoeTileEntity": {
 			"experienceLevel":"Experience Level",
 			"experienceTotal":"Experience",
