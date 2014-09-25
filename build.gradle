@@ -33,7 +33,7 @@ if (env.BUILD_ID != null) {
 
 minecraft {
     version = "1.7.10-10.13.0.1207"
-    assetDir = "eclipse/assets"
+    runDir = "eclipse/assets"
     replaceIn "wailanbt/reference/Reference.java"
     replace "@VERSION@", rootProject.mod_version
 }
