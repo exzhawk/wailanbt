@@ -11,10 +11,10 @@
 			"castingDelay":"Casting Delay"
         },
 		"TConstruct.Furnace": {
-			"Fuel":"Burn Time"
+			"Fuel":"Remaining Fuel"
         },
 		"FrypanLogic": {
-			"Fuel":"Burn Time"
+			"Fuel":"Remaining Fuel"
 		}
 	}
 }
