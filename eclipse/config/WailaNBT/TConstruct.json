@@ -12,6 +12,9 @@
         },
 		"TConstruct.Furnace": {
 			"Fuel":"Burn Time"
-        }
-  	}
+        },
+		"FrypanLogic": {
+			"Fuel":"Burn Time"
+		}
+	}
 }
