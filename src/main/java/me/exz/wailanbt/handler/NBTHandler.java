@@ -22,7 +22,7 @@ public class NBTHandler {
         for (Map.Entry<String, JsonElement> holdItem : holdItemA) {
             Pattern pattern = Pattern.compile(holdItem.getKey());
             Matcher matcher = pattern.matcher(heldItemName);
-            if (matcher.matches()) {
+            if (matcher.matches()||flag==2) {
                 Set<Map.Entry<String, JsonElement>> teIDA = holdItem.getValue().getAsJsonObject().entrySet();
                 for (Map.Entry<String, JsonElement> teID : teIDA) {
                     tips.addAll(getTipsFromNBTWithHeldItem(n, teID.getKey(), teID.getValue()));
@@ -68,7 +68,11 @@ public class NBTHandler {
             if (value.equals("__ERROR__")) {
                 return "__ERROR__";
             }
-            return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName.isEmpty() ? tagName : displayName, value);
+            if (flag==2) {
+                return String.format("%s : %s", displayName.isEmpty() ? tagName : displayName, value);
+            }else{
+                return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName.isEmpty() ? tagName : displayName, value);
+            }
         } else {
             String compoundID = pathDeep.get(0);
             pathDeep.remove(0);

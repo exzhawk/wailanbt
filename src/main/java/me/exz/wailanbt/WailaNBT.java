@@ -34,6 +34,6 @@ public class WailaNBT {
         ClientCommandHandler.instance.registerCommand(new CommandName());
         ClientCommandHandler.instance.registerCommand(new CommandEntity());
         MinecraftForge.EVENT_BUS.register(new ConfigEvent());
-        //MinecraftForge.EVENT_BUS.register(new TooltipHandler());
+new TooltipHandler();
     }
 }
