@@ -49,7 +49,7 @@ public class EntityHandler implements IWailaEntityProvider {
             }
             NBTHandler.flag=1;
             NBTHandler.id= EntityList.getEntityString(currentEntity);
-            currenttip.add(NBTHandler.id);
+            //currenttip.add(NBTHandler.id);
             List<String> tips = NBTHandler.getTipsFromNBT(n, holdItemNameReal);
             currenttip.addAll(tips);
         }

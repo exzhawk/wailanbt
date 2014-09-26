@@ -11,6 +11,7 @@ import me.exz.wailanbt.commands.CommandName;
 import me.exz.wailanbt.commands.CommandReload;
 import me.exz.wailanbt.configuration.ConfigEvent;
 import me.exz.wailanbt.configuration.config;
+import me.exz.wailanbt.handler.TooltipHandler;
 import me.exz.wailanbt.reference.Reference;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,5 +34,6 @@ public class WailaNBT {
         ClientCommandHandler.instance.registerCommand(new CommandName());
         ClientCommandHandler.instance.registerCommand(new CommandEntity());
         MinecraftForge.EVENT_BUS.register(new ConfigEvent());
+        //MinecraftForge.EVENT_BUS.register(new TooltipHandler());
     }
 }
