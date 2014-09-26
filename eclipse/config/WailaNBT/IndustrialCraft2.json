@@ -1,7 +1,7 @@
 {
     ".*": {
 		"Generator": {
-			"fuel":"Fuel Remain",
+			"fuel":"Remaining Fuel",
 			"storage":"Energy Storage"
       		},
 		"Geothermal Generator": {
@@ -9,7 +9,7 @@
 			"storage":"Energy Storage"
 	  	},
 		"Water Mill": {
-			"fuel":"Water Remain",
+			"fuel":"Remaining Water",
 			"storage":"Energy Storage"
 		 },
 		"Solar Panel": {
@@ -23,7 +23,7 @@
 			"output":"Energy Output"
 		},
 		"Radioisotope Thermoelectric Generator": {
-			"fuel":"Fuel Remain",
+			"fuel":"Remaining Fuel",
 			"storage":"Energy Storage"
 		},
 		"Semifluid Generator": {
@@ -152,7 +152,7 @@
 		},
 		"Solid Heat Generator": {
 			"HeatBuffer":"Heat Buffer",
-			"fuel":"Fuel Remain"
+			"fuel":"Remaining Fuel"
 		},
 		"Fluid Heat Generator": {
 			"HeatBuffer":"Heat Buffer",
@@ -167,7 +167,7 @@
 		},
 		"Iron Furnace": {
 			"progress":"Progress",
-			"fuel":"Fuel Remain",
+			"fuel":"Remaining Fuel",
 			"maxFuel":"Max Fuel"
 		},
 		"Electric Furnace": {
