@@ -13,10 +13,10 @@ import static mcp.mobius.waila.api.SpecialChars.ALIGNRIGHT;
 import static mcp.mobius.waila.api.SpecialChars.TAB;
 import static mcp.mobius.waila.api.SpecialChars.WHITE;
 
-public class NBTHandler {
-    protected static byte flag;//0 for block; 1 for entity
-    protected static String id = "";
-    protected static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
+class NBTHandler {
+    static byte flag;//0 for block; 1 for entity
+    static String id = "";
+    static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
         List<String> tips = new ArrayList<String>();
         Set<Map.Entry<String, JsonElement>> holdItemA = config.configJson.entrySet();
         for (Map.Entry<String, JsonElement> holdItem : holdItemA) {
