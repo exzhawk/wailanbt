@@ -1,8 +1,10 @@
 package me.exz.wailanbt;
 
+import codechicken.nei.guihook.GuiContainerManager;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -16,7 +18,7 @@ import me.exz.wailanbt.reference.Reference;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, dependencies = "required-after:Waila")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, dependencies = "required-after:Waila;required-after:NotEnoughItems")
 public class WailaNBT {
 
     @SideOnly(Side.CLIENT)
@@ -34,6 +36,12 @@ public class WailaNBT {
         ClientCommandHandler.instance.registerCommand(new CommandName());
         ClientCommandHandler.instance.registerCommand(new CommandEntity());
         MinecraftForge.EVENT_BUS.register(new ConfigEvent());
-new TooltipHandler();
+    }
+    @SuppressWarnings("UnusedDeclaration")
+    @SideOnly(Side.CLIENT)
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event){
+        GuiContainerManager.addTooltipHandler(new TooltipHandler());
+
     }
 }
