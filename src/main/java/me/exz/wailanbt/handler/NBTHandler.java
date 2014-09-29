@@ -10,10 +10,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static mcp.mobius.waila.api.SpecialChars.ALIGNRIGHT;
-import static mcp.mobius.waila.api.SpecialChars.TAB;
-import static mcp.mobius.waila.api.SpecialChars.WHITE;
-
+import static mcp.mobius.waila.api.SpecialChars.*;
 class NBTHandler {
     static byte flag;//0 for block; 1 for entity
     static String id = "";
@@ -54,7 +51,7 @@ class NBTHandler {
 
     private static String getTipFromNBTWithPath(NBTTagCompound n, String path, String displayName) {
         List<String> pathDeep = new ArrayList<String>(Arrays.asList(path.split(">>>")));
-        String tip = getTipFromPathDeep(n, pathDeep, displayName);
+        String tip = getTipFromPathDeep(n, pathDeep, displayName.isEmpty()?path:displayName);
         if (!tip.equals("__ERROR__")) {
             return tip;
         } else {
