@@ -2,38 +2,60 @@ package me.exz.wailanbt.util;
 
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import org.apache.commons.lang3.StringUtils;
 
 
 public class NBTHelper {
-    public static String NBTTypeToString(NBTTagCompound n, String id) {
-        if (n.hasKey(id)) {
-            NBTBase tag = n.getTag(id);
-            switch (tag.getId()) {
-                case 0:
-                case 3:
-                case 7:
-                case 9:
-                case 10:
-                case 11:
-                    return tag.toString();
-                case 1:
-                case 2:
-                case 4:
-                case 5:
-                case 6:
-                    return StringUtils.substring(tag.toString(), 0, -1);
-                case 8:
-                    return StringUtils.substring(tag.toString(), 1, -1);
-                default:
+    @SuppressWarnings({"UnusedDeclaration", "deprecation"})
+    @Deprecated
+    public static String NBTTypeToString(NBTBase n, String id) {
+        switch (n.getId()) {
+            case 10:
+                NBTTagCompound tagCompound = (NBTTagCompound) n;
+                if (tagCompound.hasKey(id)) {
+                    NBTBase tag = ((NBTTagCompound) n).getTag(id);
+                    return NBTToString(tag);
+                } else {
                     return "__ERROR__";
-
-            }
-        } else {
-            return "__ERROR__";
+                }
+            case 9:
+                NBTTagList tagList = (NBTTagList) n;
+                Integer idInt = Integer.valueOf(id);
+                switch (tagList.func_150303_d()) {
+                    case 10:
+                        return (tagList.getCompoundTagAt(idInt).toString());
+                    case 9:
+                        return StringUtils.substring(tagList.getStringTagAt(idInt),1,-1);
+                    default:
+                        return "__ERROR__";
+                }
+            default:
+                return "__ERROR__";
         }
+    }
 
+    public static String NBTToString(NBTBase tag) {
+        switch (tag.getId()) {
+            case 0:
+            case 3:
+            case 7:
+            case 9:
+            case 10:
+            case 11:
+                return tag.toString();
+            case 1:
+            case 2:
+            case 4:
+            case 5:
+            case 6:
+                return StringUtils.substring(tag.toString(), 0, -1);
+            case 8:
+                return StringUtils.substring(tag.toString(), 1, -1);
+            default:
+                return "__ERROR__";
 
+        }
     }
 
     @SuppressWarnings({"UnusedDeclaration", "deprecation"})
