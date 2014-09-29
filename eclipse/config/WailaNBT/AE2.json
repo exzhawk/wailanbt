@@ -1,0 +1,40 @@
+{
+    ".*": {
+		"BlockChest": {
+			"internalCurrentPower":"Internal Power",
+			"Priority":"Priority"
+		},
+		"BlockDrive": {
+			"Priority":"Priority"
+		},
+		"BlockInterface": {
+			"Priority":"Priority"
+		},
+		"BlockInterface": {
+			"Priority":"Priority"
+		},
+		"BlockVibrationChamber": {
+			"burnSpeed":"Burn Speed",
+			"burnTime":"Burn Time"
+		},
+		"BlockVibrationChamber": {
+			"burnSpeed":"Burn Speed",
+			"burnTime":"Burn Time"
+		},
+		"BlockInscriber": {
+			"internalCurrentPower":"Internal Power"
+		},
+		"BlockController": {
+			"internalCurrentPower":"Internal Power"
+		},
+		"BlockCondenser": {
+			"storedPower":"Internal Power"
+		},
+		"BlockCharger": {
+			"internalCurrentPower":"Internal Power"
+		},
+		"BlockCableBus": {
+			"extra:6>>>usedChannels":"Channels"
+		}
+	}
+}
