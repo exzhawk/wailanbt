@@ -6,11 +6,15 @@ import me.exz.wailanbt.util.NBTHelper;
 import net.minecraft.nbt.*;
 import org.apache.commons.lang3.StringUtils;
 
+import javax.script.Invocable;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static mcp.mobius.waila.api.SpecialChars.*;
+
 class NBTHandler {
     static byte flag;//0 for block; 1 for entity
     static String id = "";
@@ -51,7 +55,7 @@ class NBTHandler {
 
     private static String getTipFromNBTWithPath(NBTTagCompound n, String path, String displayName) {
         List<String> pathDeep = new ArrayList<String>(Arrays.asList(path.split(">>>")));
-        String tip = getTipFromPathDeep(n, pathDeep, displayName.isEmpty()?path:displayName);
+        String tip = getTipFromPathDeep(n, pathDeep, displayName.isEmpty() ? path : displayName);
         if (!tip.equals("__ERROR__")) {
             return tip;
         } else {
@@ -110,10 +114,23 @@ class NBTHandler {
     }
 
     private static String getTipFormatted(String displayName, String tipValue) {
-        if (flag == 2) {
-            return String.format("%s : %s", displayName, tipValue);
+        if (displayName.startsWith("function p(v){")) {
+            ScriptEngineManager manager=new ScriptEngineManager();
+            ScriptEngine engine=manager.getEngineByName("javascript");
+            try {
+                engine.eval(displayName);
+                Invocable invoke = (Invocable)engine;
+                return String.valueOf(invoke.invokeFunction("p",tipValue));
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "__ERROR__";
+            }
         } else {
-            return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName, tipValue);
+            if (flag == 2) {
+                return String.format("%s : %s", displayName, tipValue);
+            } else {
+                return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName, tipValue);
+            }
         }
     }
 }
