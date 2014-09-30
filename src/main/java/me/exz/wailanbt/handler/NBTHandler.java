@@ -9,17 +9,20 @@ import org.apache.commons.lang3.StringUtils;
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static mcp.mobius.waila.api.SpecialChars.*;
 
-class NBTHandler {
+public class NBTHandler {
+    public static ScriptEngineManager manager ;
+    public static ScriptEngine engine ;
+    public static HashSet<String> scriptSet;
     static byte flag;//0 for block; 1 for entity
     static String id = "";
-    static ScriptEngineManager manager=new ScriptEngineManager(null);
-    static ScriptEngine engine=manager.getEngineByName("javascript");
 
     static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
         List<String> tips = new ArrayList<String>();
@@ -118,9 +121,15 @@ class NBTHandler {
     private static String getTipFormatted(String displayName, String tipValue) {
         if (displayName.startsWith("function p(v){")) {
             try {
-                engine.eval(displayName);
-                Invocable invoke = (Invocable)engine;
-                return String.valueOf(invoke.invokeFunction("p",tipValue));
+                String hash = "S"+MD5(displayName);
+                if (!scriptSet.contains(hash)) {
+                    scriptSet.add(hash);
+                    String script = "function " + hash + displayName.substring(10);
+                    //LogHelper.info(script);
+                    engine.eval(script);
+                }
+                Invocable invoke = (Invocable) engine;
+                return String.valueOf(invoke.invokeFunction(hash, tipValue));
             } catch (Exception e) {
                 e.printStackTrace();
                 return "__ERROR__";
@@ -132,5 +141,21 @@ class NBTHandler {
                 return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName, tipValue);
             }
         }
+    }
+
+    private static String MD5(String string) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(string.getBytes());
+            byte[] digest = md.digest();
+            StringBuilder sb = new StringBuilder();
+            for (byte b : digest) {
+                sb.append(String.format("%02x", b & 0xff));
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

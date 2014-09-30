@@ -3,6 +3,7 @@ package me.exz.wailanbt.configuration;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import me.exz.wailanbt.handler.NBTHandler;
 import me.exz.wailanbt.reference.Reference;
 import me.exz.wailanbt.util.LogHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,10 +11,12 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.StatCollector;
 
+import javax.script.ScriptEngineManager;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -44,6 +47,9 @@ public class config {
 
     public static void loadConfig(EntityPlayer player) {
         configJson = new JsonObject();
+        NBTHandler.manager = new ScriptEngineManager(null);
+        NBTHandler.engine = NBTHandler.manager.getEngineByName("javascript");
+        NBTHandler.scriptSet = new HashSet<String>();
         File[] configFiles = configDir.listFiles();
         if (!(configFiles == null)) {
             for (File configFile : configFiles) {
