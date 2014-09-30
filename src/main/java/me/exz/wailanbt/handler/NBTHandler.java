@@ -115,7 +115,7 @@ class NBTHandler {
 
     private static String getTipFormatted(String displayName, String tipValue) {
         if (displayName.startsWith("function p(v){")) {
-            ScriptEngineManager manager=new ScriptEngineManager();
+            ScriptEngineManager manager=new ScriptEngineManager(null);
             ScriptEngine engine=manager.getEngineByName("javascript");
             try {
                 engine.eval(displayName);
