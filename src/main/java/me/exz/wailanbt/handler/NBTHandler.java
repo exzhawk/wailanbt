@@ -18,6 +18,8 @@ import static mcp.mobius.waila.api.SpecialChars.*;
 class NBTHandler {
     static byte flag;//0 for block; 1 for entity
     static String id = "";
+    static ScriptEngineManager manager=new ScriptEngineManager(null);
+    static ScriptEngine engine=manager.getEngineByName("javascript");
 
     static List<String> getTipsFromNBT(NBTTagCompound n, String heldItemName) {
         List<String> tips = new ArrayList<String>();
@@ -115,8 +117,6 @@ class NBTHandler {
 
     private static String getTipFormatted(String displayName, String tipValue) {
         if (displayName.startsWith("function p(v){")) {
-            ScriptEngineManager manager=new ScriptEngineManager(null);
-            ScriptEngine engine=manager.getEngineByName("javascript");
             try {
                 engine.eval(displayName);
                 Invocable invoke = (Invocable)engine;
