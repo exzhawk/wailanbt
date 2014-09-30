@@ -1,0 +1,33 @@
+{
+    ".*": {
+		"factory.*": {
+			"energyStored": "function p(v){var r = (v);return 'Energy Storage: '+r+' RF'};",
+			"Energy": "function p(v){var r = (v);return 'Energy: '+r+' RF'};",
+			"storedQuantity": "function p(v){var r = (v);return 'Quantity Stored: '+r};",
+			"fortune": "function p(v){var r = (v);return 'Fortune: '+r};",
+			"fortune": "function p(v){var r = (v);return 'Fortune: '+r};"
+		},
+		"factoryLaserDrill": {
+			"energyStored": "function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};",
+			"workDone": "function p(v){var r = (v);return 'Progress: '+r};"
+		},
+		"factorySteamTurbine": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Steam Amount: '+r+' mB'};"
+		},
+		"factoryAutoBrewer": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Water Amount: '+r+' mB'};"
+		},
+		"factoryBlockSmasher": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+		},
+		"factoryAutoAnvil": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+		},
+		"factoryAutoEnchanter": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+		},
+		"factoryWeatherCollector": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Water Amount: '+r+' mB'};"
+		}
+	}
+}

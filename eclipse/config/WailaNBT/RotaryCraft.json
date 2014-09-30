@@ -1,0 +1,9 @@
+{
+    ".*": {
+		"RC.*": {
+			"power": "function p(v){var r = (v);return '\u00A7fPower: '+r+' W'};",
+			"torque": "function p(v){var r = (v);return '\u00A7fTorque: '+r+' Nm'};",
+			"omega": "function p(v){var r = (v);return '\u00A7fSpeed: '+r+' rad/s'};"
+		}
+	}
+}
