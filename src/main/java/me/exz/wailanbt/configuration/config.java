@@ -7,11 +7,13 @@ import me.exz.wailanbt.handler.NBTHandler;
 import me.exz.wailanbt.reference.Reference;
 import me.exz.wailanbt.util.LogHelper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.StatCollector;
 
 import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -50,6 +52,20 @@ public class config {
         NBTHandler.manager = new ScriptEngineManager(null);
         NBTHandler.engine = NBTHandler.manager.getEngineByName("javascript");
         NBTHandler.scriptSet = new HashSet<String>();
+        try {
+            NBTHandler.engine.eval("var names={}");
+        } catch (ScriptException e) {
+            e.printStackTrace();
+        }
+        for (Object item : Item.itemRegistry) {
+            String ID = String.valueOf(Item.itemRegistry.getIDForObject(item));
+            String name = StatCollector.translateToLocal(((Item)item).getUnlocalizedName()+".name").trim();
+            try {
+                NBTHandler.engine.eval("name['"+ID+"']='"+name+"'");
+            } catch (ScriptException e) {
+                e.printStackTrace();
+            }
+        }
         File[] configFiles = configDir.listFiles();
         if (!(configFiles == null)) {
             for (File configFile : configFiles) {
