@@ -61,7 +61,7 @@ public class config {
             String ID = String.valueOf(Item.itemRegistry.getIDForObject(item));
             String name = StatCollector.translateToLocal(((Item)item).getUnlocalizedName()+".name").trim();
             try {
-                NBTHandler.engine.eval("name['"+ID+"']='"+name+"'");
+                NBTHandler.engine.eval("names['"+ID+"']='"+name+"'");
             } catch (ScriptException e) {
                 e.printStackTrace();
             }
