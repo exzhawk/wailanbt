@@ -18,8 +18,8 @@ import java.util.regex.Pattern;
 import static mcp.mobius.waila.api.SpecialChars.*;
 
 public class NBTHandler {
-    public static ScriptEngineManager manager ;
-    public static ScriptEngine engine ;
+    public static ScriptEngineManager manager;
+    public static ScriptEngine engine;
     public static HashSet<String> scriptSet;
     static byte flag;//0 for block; 1 for entity
     static String id = "";
@@ -121,7 +121,7 @@ public class NBTHandler {
     private static String getTipFormatted(String displayName, String tipValue) {
         if (displayName.startsWith("function p(v){")) {
             try {
-                String hash = "S"+MD5(displayName);
+                String hash = "S" + MD5(displayName);
                 if (!scriptSet.contains(hash)) {
                     scriptSet.add(hash);
                     String script = "function " + hash + displayName.substring(10);
@@ -135,11 +135,24 @@ public class NBTHandler {
                 return "__ERROR__";
             }
         } else {
+            if (displayName.contains("%")) {
+                try {
+                    return String.format(displayName, Double.valueOf(tipValue));
+                } catch (Exception e) {
+                    //e.printStackTrace();
+                }
+                try {
+                    return String.format(displayName, String.valueOf(tipValue));
+                } catch (Exception e) {
+                    //e.printStackTrace();
+                }
+            }
             if (flag == 2) {
                 return String.format("%s : %s", displayName, tipValue);
             } else {
                 return String.format("%s" + TAB + ALIGNRIGHT + WHITE + "%s", displayName, tipValue);
             }
+
         }
     }
 
