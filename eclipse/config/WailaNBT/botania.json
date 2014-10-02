@@ -2,8 +2,7 @@
     ".*": {
         "botania:pool": {
             "mana": "Mana",
-            "manaCap": "Max Mana",
-            "outputting": "Can output"
+            "manaCap": "Max Mana"
         },
         "botania:spreader": {
             "mana": "Mana"
