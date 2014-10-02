@@ -1,0 +1,7 @@
+{
+    ".*": {
+			"ChickenChunkLoader": {
+					"radius":"function p(v){var r = (v);return 'Radius: '+r};"
+		}
+	}
+}
