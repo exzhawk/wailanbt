@@ -7,7 +7,7 @@
 		"thermalexpansion.DynamoSteam": {
 			"SteamTank>>>Amount":"function p(v){var r = (v);return '\u00A7fSteam Amount: '+r+' mB'};",
 			"WaterTank>>>Amount":"function p(v){var r = (v);return '\u00A7fWater Amount: '+r+' mB'};"
-       	    },
+		},
 		"thermalexpansion.DynamoCompression": {
 			"FuelTank>>>Amount":"function p(v){var r = (v);return '\u00A7fFuel Amount: '+r+' mB'};",
 			"CoolantTank>>>Amount":"function p(v){var r = (v);return '\u00A7fCoolant Amount: '+r+' mB'};"
