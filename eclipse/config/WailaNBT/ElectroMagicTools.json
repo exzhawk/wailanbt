@@ -1,0 +1,73 @@
+{
+    ".*": {
+			"tileentityignisgenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityessentiagenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityauramgenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityetherealmacerator": {
+					"CookTime":"function p(v){var r = (v/4);return 'Progress: '+r.toFixed(0)+' %'};"
+		},
+			"tileentitycompressedsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoublecompressedsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytriplecompressedsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitywatersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoublewatersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytriplewatersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytriplewatersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydarksolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoubledarksolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytripledarksolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityordersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoubleordersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytripleordersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityfiresolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoublefiresolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytriplefiresolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityairsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoubleairsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytripleairsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		}
+	}
+}
