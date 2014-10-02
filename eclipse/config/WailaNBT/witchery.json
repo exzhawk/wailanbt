@@ -1,31 +1,21 @@
 {
     ".*": {
 		"witchery:altar": {
-			"PowerScale":"Power Scale",
-			"RangeScale":"Range Scale",
-			"Power":"Power"
+			"Power":"\u00A7fPower: %.0f",
+			"PowerScale":"function p(v){var r = (v);return '\u00A7fPower Scale: x'+r};"
 		},
 		"witchery:spinningwheel": {
-			"CookTime":"Work Time",
-			"PowerLevel":"Power Level"
+			"CookTime":"function p(v){var r = (v/3);return '\u00A7fProgress: '+r+' %'};"
 		},
 		"witchery:witchesovenidle": {
-			"CookTime":"Work Time",
-			"BurnTime":"Burn Time"
+			"CookTime":"function p(v){var r = (v/1.6);return '\u00A7fProgress: '+r+' %'};",
+			"BurnTime":"function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r+' Seconds'};"
 		},
 		"witchery:distilleryidle": {
-			"CookTime":"Work Time"
-		},
-		"witchery:kettle": {
-			"Amount":"Fluid Amount"
-		},
-		"witchery:brazier": {
-			"CookTime":"Work Time",
-			"PowerLevel":"Power Level",
-			"PowerStorage":"Power Storage"
+			"CookTime":"function p(v){var r = (v/8);return '\u00A7fProgress: '+r+' %'};"
 		},
 		"witchery:leechchest": {
-			"WITCPlayers":"Taglock Player"
+			"WITCPlayers>>>0>>>Player":"function p(v){var r = (v);return '\u00A7fTaglock Player: '+r};"
 		}
 	}
 }
