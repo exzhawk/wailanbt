@@ -1,0 +1,24 @@
+{
+    ".*": {
+			"Advanced Solar Panel": {
+					"storage":"function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};"
+		},
+			"Hybrid Solar Panel": {
+					"storage":"function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};"
+		},
+			"Ultimate Hybrid Solar Panel": {
+					"storage":"function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};"
+		},
+			"Quantum Solar Panel": {
+					"storage":"function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};"
+		},
+			"Quantum Generator": {
+					"production":"function p(v){var r = (v);return 'Output: '+r+' EU'};"
+		},
+			"Molecular Transformer": {
+					"lastRecipeEnergyPerOperation":"function p(v){var r = (v);return 'Energy Required: '+r+' EU'};",
+					"lastRecipeEnergyUsed":"function p(v){var r = (v);return 'Energy Used: '+r+' EU'};",
+					"lastProgress":"function p(v){var r = (v);return '\u00A74Progress: '+r+' %'};"
+		}
+	}
+}	
