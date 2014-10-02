@@ -1,8 +1,8 @@
 {
     ".*": {
 		"BlockChest": {
-			"internalCurrentPower":"Internal Power: %.0f AE",
-			"Priority":"Priority"
+		"internalCurrentPower":"Internal Power: %.0f AE",
+		"Priority":"Priority"
 		},
 		"BlockDrive": {
 			"Priority":"Priority"
