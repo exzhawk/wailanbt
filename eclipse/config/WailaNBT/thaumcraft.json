@@ -1,49 +1,24 @@
 {
     ".*": {
 		"TileInfusionStone": {
-			"instability":"Instability"
-	      },
-		"TileAlchemyFurnace": {
-			"BurnTime":"Burn Time",
-			"CookTime":"Work Time",
-			"Vis":"Vis Amount"
+			"instability":"\u00A7fInstability: %.0f"
 		},
-		"TileJar": {
-			"Amount":"Vis Amount",
-			"Aspect":"Aspect"
+		"TileAlchemyFurnace": {
+			"BurnTime":"function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r.toFixed(0)+' Seconds'};",
+			"Vis":"\u00A7fVis Amount Total"
 		},
 		"TileSiphon": {
-			"amount":"Vis Amount"
+			"amount":"\u00A7fVis Amount Total"
 		},
-		"TileTubeRestrict": {
-			"amount":"Vis Amount"
-		},
-		"TileTubeFilter": {
-			"amount":"Vis Amount"
-		},
-		"TileTubeValve": {
-			"amount":"Vis Amount",
-			"flow":"Open"
-		},
-		"TileTubeOneway": {
-			"amount":"Vis Amount"
-		},
-		"TileTube": {
+		"TileTube.*": {
 			"amount":"Vis Amount"
 		},
 		"TileCrucible": {
-			"Amount":"Water Amount",
-			"Heat":"Heat"
-		},
-		"TileMirror": {
-			"linked":"Linked",
-			"instability":"Instability"
+			"Amount":"function p(v){var r = (v);return '\u00A7fWater Amount: '+r+' mB'};",
+			"Heat":"function p(v){var r = (v);return '\u00A7fHeat: '+r};"
 		},
 		"TileJarBrain": {
-			"XP":"XP Storage"
-		},
-		"TileArcaneFurnace": {
-			"CookTime":"Work Time"
+			"XP":"function p(v){var r = (v);return 'XP Storage  '+r};"
 		}
 	}
 }
