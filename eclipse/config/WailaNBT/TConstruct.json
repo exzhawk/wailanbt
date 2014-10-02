@@ -1,20 +1,14 @@
 {
     ".*": {
 		"TConstruct.Smeltery": {
-			"Layers":"Layers",
-			"MaxLiquid":"Max Liquid"
-        },
-		"CastingTable": {
-			"castingDelay":"Casting Delay"
-        },
-		"CastingBasin": {
-			"castingDelay":"Casting Delay"
+			"Layers": "function p(v){var r = (v);return 'Level: '+r};",
+			"MaxLiquid": "function p(v){var r = (v);return 'Max Liquid: ('+r+' mB)'};"
         },
 		"TConstruct.Furnace": {
-			"Fuel":"Remaining Fuel"
+			"Fuel": "function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r.toFixed(0)+' Seconds'};"
         },
 		"FrypanLogic": {
-			"Fuel":"Remaining Fuel"
+			"Fuel": "function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r.toFixed(0)+' Seconds'};"
 		}
 	}
 }
