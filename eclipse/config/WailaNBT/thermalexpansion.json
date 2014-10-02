@@ -1,7 +1,7 @@
 {
     ".*": {
 		"thermalexpansion.*": {
-			"Fuel":"\u00A7fFuel",
+			"Fuel":"function p(v){var r = (v);return '\u00A7fFuel: '+r};",
 			"ProcRem":"function p(v){var r = (v);return '\u00A7fRemain Time: '+r+' ticks'};"
 		},
 		"thermalexpansion.DynamoSteam": {
