@@ -9,6 +9,12 @@
 			"tileentityauramgenerator": {
 					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
 		},
+			"tileentityarborgenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityaergenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
 			"tileentityetherealmacerator": {
 					"CookTime":"function p(v){var r = (v/4);return 'Progress: '+r.toFixed(0)+' %'};"
 		},
@@ -67,6 +73,15 @@
 					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
 		},
 			"tileentitytripleairsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityearthsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoubleearthsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytripleearthsolar": {
 					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
 		}
 	}
