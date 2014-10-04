@@ -1,0 +1,58 @@
+{
+    ".*": {
+			"forestry.Engine.*": {
+				"EngineStored":"Energy Stored: %.0f MJ",
+				"EngineHeat":"function p(v){var r = (v/10+20);return 'Heat: '+r.toFixed(0)+' C'};",
+				"EngineBurnTime":"function p(v){var r = (v/20);return 'Burn Time Left: '+r.toFixed(0)+' Seconds'};",
+				"FuelSlot>>>Amount":"Fuel Tank: %.0f mB",
+				"HeatingSlot>>>Amount":"Heating Tank: %.0f mB"
+		},
+			"forestry.Raintank": {
+				"ResourceTank>>>Amount":"Water Amout: %.0f mB"
+		},
+			"forestry.Generator.*": {
+				"IC2BasicSource>>>energy":"Energy Stored: %.0f EU",
+				"ResourceTank>>>Amount":"Biomass Amout: %.0f mB"
+		},
+			"forestry.Bottler": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB"
+		},
+			"forestry.Carpenter": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB"
+		},
+			"forestry.Centrifuge": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ"
+		},
+			"forestry.Fermenter": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB",
+				"ProductTank>>>Amount":"Product Tank: %.0f mB"
+		},
+			"forestry.Moistener": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Water Amount: %.0f mB"
+		},
+			"forestry.Squeezer": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB"
+		},
+			"forestry.Rainmaker": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ"
+		},
+			"forestry.Still": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB",
+				"ProductTank>>>Amount":"Product Tank: %.0f mB"
+		},
+			"forestry.Analyzer": {
+				"Amount":"Honey Amount: %.0f mB"
+		},
+			"forestry.*": {
+				"Temp":"function p(v){var r = (v*100);return 'Temperature: '+r.toFixed(0)+' %'};",
+				"Humidity":"function p(v){var r = (v*100);return 'Humidity: '+r.toFixed(0)+' %'};",
+				"Throttle":"function p(v){var r = (v/5.5);return 'Life Stage: '+r.toFixed(0)+' %'};"
+		}
+	}
+}
