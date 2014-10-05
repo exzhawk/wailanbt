@@ -1,0 +1,76 @@
+{
+".*": {
+       "RCCokeOvenTile": {
+       "owner":"所有者",
+       "cookTime":"炼制时间"
+       },
+	   "RCBlastFurnaceTile": {
+       "burnTime":"燃烧时间",
+       "cookTime":"炼制时间",
+	   "currentItemBurnTime":"内置物品燃烧时间",
+	   "owner":"所有者"
+       },
+	  "RCSteamOvenTile": {
+       "cookTime":"炼制时间",
+	   "owner":"所有者"
+       },
+	   "RCRollingMachineTile": {
+       "powerProvider>>>energyStored":"储存能量",
+	   "owner":"所有者"
+       },
+	    "RCRockCrusherTIle": {
+       "powerProvider>>>energyStored":"储存能量",
+	   "owner":"所有者"
+       },
+	    "RCWorldAnchorTile": {
+       "fuel":"剩余时间",
+	   "owner":"所有者"
+       },
+	   "RCPersonalAnchorTile": {
+       "fuel":"剩余时间",
+	   "owner":"所有者"
+       },
+	    "RCSteamTurbineTile": {
+       "energy":"储存能量",
+	   "owner":"所有者",
+	   "output":"输出"
+       },
+	    "RCEngineSteamHobby": {
+       "energy":"储存能量",
+	   "owner":"所有者",
+	   "currentoutput":"输出",
+	   "heat":"热量",
+	   "burnTime":"燃烧时间"
+       },
+	   "RCEngineSteamLow": {
+       "energy":"储存能量",
+	   "owner":"所有者",
+	   "currentoutput":"输出"
+       },
+	   "RCEngineSteamHigh": {
+       "energy":"储存能量",
+	   "owner":"所有者",
+	   "currentoutput":"输出"
+       },
+	    "RCBoilerFireboxLiquidTile": {
+	   "owner":"所有者",
+	   "currentItemBurnTime":"物品剩余",
+	   "heat":"热量",
+	   "burnTime":"燃烧时间"
+       },
+	     "RCBoilerFireboxSoildTile": {
+	   "owner":"所有者",
+	   "currentItemBurnTime":"物品剩余",
+	   "heat":"热量",
+	   "burnTime":"燃烧时间"
+       },
+	    "RCLoaderTileEnergy": {
+       "energy":"储存能量",
+	   "owner":"所有者"
+       },
+	    "RCUnloaderTileEnergy": {
+       "energy":"储存能量",
+	   "owner":"所有者"
+       }
+     }
+}
