@@ -1,0 +1,40 @@
+{
+    ".*": {
+			"factory_barrel.*": {
+				"item>>>id": "function p(v){return names[v]}",
+				"count": "function p(v){var r = (v);return+r+' items'};"
+		},
+			"factory_slag": {
+				"burnTime": "function p(v){var r = (v/20);return 'Burn Time Left  '+r.toFixed(0)+' Seconds'};"
+		},
+			"factory_.*": {
+				"charge": "function p(v){var r = (v);return 'Charge  '+r};",
+				"heat": "function p(v){var r = (v);return 'Heat  '+r};"
+		},
+			"factory_steamturbine": {
+				"fan": "function p(v){var r = (v);return 'Fan: '+r};",
+				"steam>>>Amount": "function p(v){var r = (v);return 'Steam Amount  '+r+' mB'};"
+		},
+			"factory_solarfurnace": {
+				"water>>>Amount": "function p(v){var r = (v);return 'Water Amount  '+r+' mB'};",
+				"steam>>>Amount": "function p(v){var r = (v);return 'Steam Amount  '+r+' mB'};"
+		},
+			"factory_battery": {
+				"storage": "function p(v){var r = (v);return 'Energy Storage  '+r+' CG'};"
+		},
+			"factory_leyjar": {
+				"store": "function p(v){var r = (v);return 'Energy Storage  '+r+' CG'};"
+		},
+			"factory_calory": {
+				"digest": "function p(v){var r = (v/20);return 'Digest  '+r.toFixed(0)+' Seconds'};"
+		},
+			"factory_crystal": {
+				"progress": "function p(v){var r = (v);return '\u00A74Progress  '+r+' %'};"
+		},
+			"fzsock_lacerate": {
+				"chargecharge": "function p(v){var r = (v);return 'Charge  '+r};",
+				"spd": "function p(v){var r = (v/2);return 'Speed  '+r+' %'};",
+				"prg": "function p(v){var r = (v*1.4);return '\u00A74Progress  '+r.toFixed(0)+' %'};"
+		}
+	}
+}
