@@ -29,12 +29,11 @@
 				"digest": "function p(v){var r = (v/20);return 'Digest  '+r.toFixed(0)+' Seconds'};"
 		},
 			"factory_crystal": {
-				"progress": "function p(v){var r = (v);return '\u00A74Progress  '+r+' %'};"
+				"progress": "function p(v){var r = (v/60);return '\u00A74Progress  '+r.toFixed(0)+' %'};"
 		},
 			"fzsock_lacerate": {
 				"chargecharge": "function p(v){var r = (v);return 'Charge  '+r};",
-				"spd": "function p(v){var r = (v/2);return 'Speed  '+r+' %'};",
-				"prg": "function p(v){var r = (v*1.4);return '\u00A74Progress  '+r.toFixed(0)+' %'};"
+				"spd": "function p(v){var r = (v/2);return 'Speed  '+r.toFixed(0)+' %'};"
 		}
 	}
 }
