@@ -1,0 +1,50 @@
+{
+".*": {
+  "Air Collector":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },
+    "Air Compressor":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },
+    "Oxygen Decompressor":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },
+      "Air Distributor":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },    
+  "Air Sealer":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },
+  "Refinery":{
+  "EnergyF":"energy",
+  "oilTank>>>Amount":"oil Amount",
+  "fuelTank>>>Amount":"fuel Amount"
+  },
+  "Fuel Loader":{
+  "EnergyF":"energy",
+  "fuelTank>>>Amount":"fuel Amount"
+  },
+  "Cargo Loader":{
+  "EnergyF":"energy"
+  },
+  "Cargo Unloader":{
+  "EnergyF":"energy"
+  },
+  "Galacticraft Coal Generator":{
+  "EnergyF":"energy",
+  "generateRate":"generateRate",
+  "itemCookTime":"cook time"
+  },
+  "Circuit Fabricator":{
+  "EnergyF":"energy"
+  },
+  "Electric Ingot Compressor":{
+  "EnergyF":"energy"
+  }
+  }
+}
