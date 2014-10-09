@@ -45,6 +45,43 @@
   },
   "Electric Ingot Compressor":{
   "EnergyF":"energy"
-  }
+  },
+    "Galacticraft Solar Panel":{
+  "EnergyF":"energy"
+  },
+     "Energy Storage Module":{
+  "EnergyF":"energy"
+  },
+     "Galacticraft Electric Furnace":{
+  "EnergyF":"energy"
+  },
+  "Gas Liquefier":{
+  "EnergyF":"energy",
+  "TargetFrequency":"TargetFrequency",
+    "gasTank>>>Amount":"gas Amount",
+	  "liquidTank>>>Amount":"liquid Amount"
+  },
+    "Methane Synthesizer":{
+  "EnergyF":"energy",
+  "TargetFrequency":"TargetFrequency",
+    "gasTank>>>Amount":"gas Amount",
+	  "liquidTank>>>Amount":"liquid Amount"
+  },
+  "GalacticraftCore.Spaceship":{
+  "timeUntilLaunch":"timeUntilLaunch",
+   "fuelTank>>>Amount":"fuel Amount"
+   },
+     "SpaceshipT2":{
+  "timeUntilLaunch":"timeUntilLaunch",
+   "fuelTank>>>Amount":"fuel Amount"
+   },
+     "Tier3RocketGC":{
+  "timeUntilLaunch":"timeUntilLaunch",
+   "fuelTank>>>Amount":"fuel Amount"
+   },
+  "GalacticraftCore.Buggy":{
+  "fuel":"fuel(?)",
+   "fuelTank>>>Amount":"fuel Amount"
+   }
   }
 }
