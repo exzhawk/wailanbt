@@ -1,0 +1,51 @@
+{
+   ".*":{
+        "boiler":{
+		"water":"water",
+		"steam":"steam",
+		"BurnTime":"burn time",
+		"Items>>>0>>>id": "function p(v){return names[v]}",
+		"Items>>>0>>>Count": "count"
+		},
+		"steamTank":{
+        "steam":"steam"
+		},
+		"flashBoiler":{
+		"BurnTime":"burn time",
+		"water":"water",
+		"steam":"steam",
+		"heat":"function p(v){var r = (v);return '\u00A7cheat: '+r};"
+		},
+		"smasher":{
+		"steam":"steam",
+		"hasBeenSet":"has Been Set or not"
+		},
+		"heater":{
+		"steam":"steam"
+		},
+		"steamCharger":{
+		"steam":"steam"
+		},
+		"steamHammer":{
+		"steam":"steam",
+		"progress":"progress",
+		"cost":"cost"
+		},
+		"itemMortar":{
+		"steam":"steam",
+		"fireTicks":"fireTicks"
+		},
+		"thumper":{
+		"steam":"steam",
+		"progress":"progress"
+		},
+		"fan":{
+		"steam":"steam",
+		"range":"range"
+		},
+		"vacuum":{
+		"steam":"steam",
+		"range":"range"
+		}
+}
+}
