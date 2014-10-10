@@ -1,0 +1,984 @@
+{
+    ".*": {
+		"BlockChest": {
+			"internalCurrentPower":"Internal Power: %.0f AE",
+			"Priority":"Priority"
+		},
+		"BlockDrive": {
+			"Priority":"Priority"
+		},
+		"BlockInterface": {
+			"Priority":"Priority"
+		},
+		"BlockInscriber": {
+			"internalCurrentPower":"Internal Power: %.0f AE"
+		},
+		"BlockController": {
+			"internalCurrentPower":"Internal Power: %.0f AE"
+		},
+		"BlockCondenser": {
+			"storedPower":"Internal Power: %.0f AE"
+		},
+		"BlockCharger": {
+			"internalCurrentPower":"Internal Power: %.0f AE"
+		},
+		"BlockCableBus": {
+			"extra:6>>>usedChannels":"Used Channels"
+		},
+		"Rotary Macerator": {
+				"energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};",
+				"speed":"function p(v){var r = (v);return 'Speed: '+r+' RPM'};"
+		},
+		"Singularity Compressor": {
+				"energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+		"Centrifuge Extractor": {
+				"energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};",
+				"speed":"function p(v){var r = (v);return 'Speed: '+r+' RPM'};"
+		},
+		"immibis.am2.*": {
+				"energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};",
+				"water":"function p(v){var r = (v);return 'Water Amount: '+r+' mB'};"
+		},
+		"immibis.am2.canner": {
+				"speed":"function p(v){var r = (v);return 'Speed: '+r+' cm/s'};"
+		},
+			"Advanced Solar Panel": {
+					"storage":"function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};"
+		},
+			"Hybrid Solar Panel": {
+					"storage":"function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};"
+		},
+			"Ultimate Hybrid Solar Panel": {
+					"storage":"function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};"
+		},
+			"Quantum Solar Panel": {
+					"storage":"function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};"
+		},
+			"Quantum Generator": {
+					"production":"function p(v){var r = (v);return 'Output: '+r+' EU'};"
+		},
+			"Molecular Transformer": {
+					"lastRecipeEnergyPerOperation":"function p(v){var r = (v);return 'Energy Required: '+r+' EU'};",
+					"lastRecipeEnergyUsed":"function p(v){var r = (v);return 'Energy Used: '+r+' EU'};",
+					"lastProgress":"function p(v){var r = (v);return '\u00A74Progress: '+r+' %'};"
+		},
+		 "containerAltar":{
+            "Amount":"Life Essence",
+            "capacity":"Capacity",
+            "progress":"LP proceed",
+            "liquidRequired":"LP required",
+            "upgradeLevel":"Tier",
+            "capacityMultiplier":"Capacity *",
+            "consumptionMultiplier":"Speed *",
+            "dislocationMultiplier":"Dislocation *",
+            "efficiencyMultiplier":"Efficiency *",
+            "orbCapacityMultiplier":"Orb capacity *",
+            "sacrificeEfficiencyMultiplier":"Sacrifice *",
+            "selfSacrificeEfficiencyMultiplier":"Self-Sacrifice *"
+        },
+        "containerMasterStone":{
+            "currentRitualString":"Ritual ID",
+            "owner":"Ritual Owner"
+        },
+        "containerWritingTable":{
+            "amountUsed":"LP required(*100)",
+            "progress":"Progress(%)"
+        },
+		   "botania:pool": {
+            "mana": "Mana",
+            "manaCap": "Max Mana"
+        },
+        "botania:spreader": {
+            "mana": "Mana"
+        },
+        "botania:runeAltar": {
+            "mana": "Mana"
+        },
+        "botania:enchanter": {
+            "mana": "Mana",
+            "manaRequired": "Mana Required"
+        },
+        "botania:specialFlower": {
+            "subTileCmp>>>mana": "Mana"
+        },
+		"botania:rfGenerator": {
+            "mana": "Mana"
+        },
+		"botania:spawnerClaw": {
+            "mana": "Mana"
+        },
+		"net.minecraft.src.buildcraft.energy.TileEngineCreative": {
+            		"heat":"Heat",
+            		"progress":"Stroke Progress",
+            		"energy":"Energy"
+        },
+		"net.minecraft.src.buildcraft.factory.TileLaser": {
+            		"mjStored": "MJ Stored"
+        },
+		"net.minecraft.src.buildcraft.factory.TileAssemblyTable": {
+            		"energy": "Energy"
+	},
+		"net.minecraft.src.buildcraft.factory.TilePump": {
+            		"mjStored": "MJ Stored",
+			"tank>>>Amount": "Liquid Amount",
+			"tank>>>FluidName": "Storage Fluid",
+			"tank>>>acceptedFluid": "Input Fluid"
+	},
+		"net.minecraft.src.buildcraft.factory.TileAssemblyAdvancedWorkbench": {
+            		"energy": "Energy"
+	},
+		"net.minecraft.src.buildcraft.factory.TileIntegrationTable": {
+            		"energy": "Energy"
+	},
+		"net.minecraft.src.buildcraft.energy.TileEngineWood": {
+            		"heat":"Heat",
+            		"progress":"Stroke Progress",
+            		"energy":"Energy"
+	},
+		"net.minecraft.src.buildcraft.energy.TileEngineStone": {
+            		"heat":"Heat",
+            		"progress":"Stroke Progress",
+            		"energy":"Energy",
+			"burnTime":"Burn Time",
+			"totalBurnTime":"Total Burn Time"
+	},
+		"EnergyConverter": {
+            		"mjStored":"MJ Stored",
+			"converterMode":"Mode"
+	},
+		"Machine": {
+            		"mjStored":"MJ Stored"
+	},
+			"ChickenChunkLoader": {
+					"radius":"function p(v){var r = (v);return 'Radius: '+r};"
+		},
+			"tileentityignisgenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityessentiagenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityauramgenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityarborgenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityaergenerator": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityetherealmacerator": {
+					"CookTime":"function p(v){var r = (v/4);return 'Progress: '+r.toFixed(0)+' %'};"
+		},
+			"tileentitycompressedsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoublecompressedsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytriplecompressedsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitywatersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoublewatersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytriplewatersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytriplewatersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydarksolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoubledarksolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytripledarksolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityordersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoubleordersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytripleordersolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityfiresolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoublefiresolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytriplefiresolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityairsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoubleairsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytripleairsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentityearthsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitydoubleearthsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+			"tileentitytripleearthsolar": {
+					"IC2BasicSource>>>energy":"function p(v){var r = (v);return 'Energy: '+r+' EU'};"
+		},
+		"blockKillerJoeTileEntity": {
+			"experienceLevel":"function p(v){var r = (v);return '\u00A7fLevel: '+r};",
+			"experienceTotal":"function p(v){var r = (v);return '\u00A7fExperience: '+r};",
+			"fuelTank>>>Amount":"function p(v){var r = (v);return '\u00A7fNutrient Amount: '+r+'/2000 mB'};"
+		},
+		"blockZombieGeneratorTileEntity": {
+			"fuelTank>>>Amount":"function p(v){var r = (v);return '\u00A7fNutrient Amount: '+r+'/2000 mB'};"
+		},
+		"blockPoweredSpawnerTileEntity": {
+			"currentTask>>>chance":"\u00A7fSpawn Chance: %.2f",
+			"currentTask>>>usedEnergy":"\u00A7fEnergy Used: %.0f RF"
+		},
+		"blockTankTileEntity": {
+			"tankContents>>>Amount":"function p(v){var r = (v);return '\u00A7fFluid Amount: '+r+' mB'};",
+			"tankContents>>>FluidName":"function p(v){r=v.substring(0,1).toUpperCase()+v.substring(1);return '\u00A7fFluid: ' +r}"
+		},
+		"blockStirlingGeneratorTileEntity": {
+			"burnTime":"function p(v){var r = (v/20);return 'Burn Time Left: '+r.toFixed(0)+' Seconds'};"
+		},
+		"blockCombustionGeneratorTileEntity": {
+			"coolantTank>>>Amount":"function p(v){var r = (v);return 'Coolant Amount: '+r+'/5000 mB'};",
+			"fuelTank>>>Amount":"function p(v){var r = (v);return 'Fuel Amount: '+r+'/5000 mB'};"
+		},
+		"blockSagMillTileEntity": {
+			"storedEnergy":"function p(v){var r = (v);return 'Energy: '+r+' RF'};"
+		},
+		"blockAlloySmelterTileEntity": {
+			"storedEnergy":"function p(v){var r = (v);return 'Energy: '+r+' RF'};"
+		},
+		"blockVatTileEntity": {
+			"inputTank>>>Amount":"function p(v){var r = (v);return 'Input Fluid Amount: '+r+' /8000 mB'};",
+			"outputTank>>>Amount":"function p(v){var r = (v);return 'Output Fluid Amount: '+r+' /8000 mB'};"
+		},
+		 "boiler":{
+		"water":"water",
+		"steam":"steam",
+		"BurnTime":"burn time",
+		"Items>>>0>>>id": "function p(v){return names[v]}",
+		"Items>>>0>>>Count": "count"
+		},
+		"steamTank":{
+        "steam":"steam"
+		},
+		"flashBoiler":{
+		"BurnTime":"burn time",
+		"water":"water",
+		"steam":"steam",
+		"heat":"function p(v){var r = (v);return '\u00A7cheat: '+r};"
+		},
+		"smasher":{
+		"steam":"steam",
+		"hasBeenSet":"has Been Set or not"
+		},
+		"heater":{
+		"steam":"steam"
+		},
+		"steamCharger":{
+		"steam":"steam"
+		},
+		"steamHammer":{
+		"steam":"steam",
+		"progress":"progress",
+		"cost":"cost"
+		},
+		"itemMortar":{
+		"steam":"steam",
+		"fireTicks":"fireTicks"
+		},
+		"thumper":{
+		"steam":"steam",
+		"progress":"progress"
+		},
+		"fan":{
+		"steam":"steam",
+		"range":"range"
+		},
+		"vacuum":{
+		"steam":"steam",
+		"range":"range"
+		},
+			"forestry.Engine.*": {
+				"EngineStored":"Energy Stored: %.0f MJ",
+				"EngineHeat":"function p(v){var r = (v/10+20);return 'Heat: '+r.toFixed(0)+' C'};",
+				"EngineBurnTime":"function p(v){var r = (v/20);return 'Burn Time Left: '+r.toFixed(0)+' Seconds'};",
+				"FuelSlot>>>Amount":"Fuel Tank: %.0f mB",
+				"HeatingSlot>>>Amount":"Heating Tank: %.0f mB"
+		},
+			"forestry.Raintank": {
+				"ResourceTank>>>Amount":"Water Amout: %.0f mB"
+		},
+			"forestry.Generator.*": {
+				"IC2BasicSource>>>energy":"Energy Stored: %.0f EU",
+				"ResourceTank>>>Amount":"Biomass Amout: %.0f mB"
+		},
+			"forestry.Bottler": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB"
+		},
+			"forestry.Carpenter": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB"
+		},
+			"forestry.Centrifuge": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ"
+		},
+			"forestry.Fermenter": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB",
+				"ProductTank>>>Amount":"Product Tank: %.0f mB"
+		},
+			"forestry.Moistener": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Water Amount: %.0f mB"
+		},
+			"forestry.Squeezer": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB"
+		},
+			"forestry.Rainmaker": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ"
+		},
+			"forestry.Still": {
+				"powerProvider>>>energyStored":"Energy Stored: %.0f MJ",
+				"ResourceTank>>>Amount":"Resource Tank: %.0f mB",
+				"ProductTank>>>Amount":"Product Tank: %.0f mB"
+		},
+			"forestry.Analyzer": {
+				"Amount":"Honey Amount: %.0f mB"
+		},
+			"forestry.*": {
+				"Temp":"function p(v){var r = (v*100);return 'Temperature: '+r.toFixed(0)+' %'};",
+				"Humidity":"function p(v){var r = (v*100);return 'Humidity: '+r.toFixed(0)+' %'};",
+				"Throttle":"function p(v){var r = (v/5.5);return 'Life Stage: '+r.toFixed(0)+' %'};"
+		},
+		 "Air Collector":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },
+    "Air Compressor":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },
+    "Oxygen Decompressor":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },
+      "Air Distributor":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },    
+  "Air Sealer":{
+  "EnergyF":"energy",
+  "storedOxygenF":"air stored"
+  },
+  "Refinery":{
+  "EnergyF":"energy",
+  "oilTank>>>Amount":"oil Amount",
+  "fuelTank>>>Amount":"fuel Amount"
+  },
+  "Fuel Loader":{
+  "EnergyF":"energy",
+  "fuelTank>>>Amount":"fuel Amount"
+  },
+  "Cargo Loader":{
+  "EnergyF":"energy"
+  },
+  "Cargo Unloader":{
+  "EnergyF":"energy"
+  },
+  "Galacticraft Coal Generator":{
+  "EnergyF":"energy",
+  "generateRate":"generateRate",
+  "itemCookTime":"cook time"
+  },
+  "Circuit Fabricator":{
+  "EnergyF":"energy"
+  },
+  "Electric Ingot Compressor":{
+  "EnergyF":"energy"
+  },
+    "Galacticraft Solar Panel":{
+  "EnergyF":"energy"
+  },
+     "Energy Storage Module":{
+  "EnergyF":"energy"
+  },
+     "Galacticraft Electric Furnace":{
+  "EnergyF":"energy"
+  },
+  "Gas Liquefier":{
+  "EnergyF":"energy",
+  "TargetFrequency":"TargetFrequency",
+    "gasTank>>>Amount":"gas Amount",
+	  "liquidTank>>>Amount":"liquid Amount"
+  },
+    "Methane Synthesizer":{
+  "EnergyF":"energy",
+  "TargetFrequency":"TargetFrequency",
+    "gasTank>>>Amount":"gas Amount",
+	  "liquidTank>>>Amount":"liquid Amount"
+  },
+  "GalacticraftCore.Spaceship":{
+  "timeUntilLaunch":"timeUntilLaunch",
+   "fuelTank>>>Amount":"fuel Amount"
+   },
+     "SpaceshipT2":{
+  "timeUntilLaunch":"timeUntilLaunch",
+   "fuelTank>>>Amount":"fuel Amount"
+   },
+     "Tier3RocketGC":{
+  "timeUntilLaunch":"timeUntilLaunch",
+   "fuelTank>>>Amount":"fuel Amount"
+   },
+  "GalacticraftCore.Buggy":{
+  "fuel":"fuel(?)",
+   "fuelTank>>>Amount":"fuel Amount"
+   },
+   	"Generator": {
+			"fuel":"Remaining Fuel",
+			"storage":"Energy Storage: %.0f EU"
+	   	},
+		"Geothermal Generator": {
+			"fluidTank>>>Amount":"Lava Amount",
+			"storage":"Energy Storage: %.0f EU"
+	  	},
+		"Water Mill": {
+			"fuel":"Remaining Water",
+			"storage":"Energy Storage: %.0f EU"
+		 },
+		"Solar Panel": {
+			"storage":"Energy Storage: %.0f EU"
+		 },
+		"Wind Mill": {
+			"storage":"Energy Storage: %.0f EU"
+		},
+		"Nuclear Reactor": {
+			"heat":"Heat",
+			"output":"Energy Output"
+		},
+		"Radioisotope Thermoelectric Generator": {
+			"fuel":"Remaining Fuel",
+			"storage":"Energy Storage: %.0f EU"
+		},
+		"Semifluid Generator": {
+			"storage":"Energy Storage: %.0f EU",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Stirling Generator": {
+			"EUstorage":"Energy Storage: %.0f EU"
+		},
+		"Kinetic Generator": {
+			"EUstorage":"Energy Storage: %.0f EU"
+		},
+		"Luminator": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Tesla Coil": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Crop-Matron": {
+			"energy":"Energy Storage: %.0f EU",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Thermal Centrifuge": {
+			"energy":"Energy Storage: %.0f EU",
+			"heat":"Heat",
+			"progress":"Progress"
+		},
+		"Metal Former": {
+			"energy":"Energy Storage: %.0f EU",
+			"mode":"Mode",
+			"progress":"Progress"
+		},
+		"Ore Washing Plant": {
+			"energy":"Energy Storage: %.0f EU",
+			"progress":"Progress",
+			"fluidTank>>>Amount":"Water Amount"
+		},
+		"Scanner": {
+			"energy":"Energy Storage: %.0f EU",
+			"progress":"Progress",
+			"state":"State"
+		},
+		"Replicator": {
+			"energy":"Energy Storage: %.0f EU",
+			"uuProcessed":"UU Processed",
+			"fluidTank>>>Amount":"UU Amount",
+			"extraUuStored":"Extra UU Storage"
+		},
+		"Solid Canner Maschine": {
+			"energy":"Energy Storage: %.0f EU",
+			"progress":"Progress"
+		},
+		"Fluid Bottler Maschine": {
+			"energy":"Energy Storage: %.0f EU",
+			"progress":"Progress",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Advanced Miner": {
+			"energy":"Energy Storage: %.0f EU",
+			"silktouch":"Silk Touch",
+			"minelayer":"Mining Layer"
+		},
+		"Liquid Heat Exchanger": {
+			"HeatBuffer":"Heat Buffer",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Fermenter": {
+			"HeatBuffer":"Heat Buffer",
+			"progress":"Progress",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Fluid Regulator": {
+			"energy":"Energy Storage: %.0f EU",
+			"outputmb":"Output Amount",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Condenser": {
+			"energy":"Energy Storage: %.0f EU",
+			"progress":"Progress",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Steam Generator": {
+			"calcification":"Calcification",
+			"pressurevalve":"Pressure Valve",
+			"systemheat":"System Heat"
+		},
+		"Blast Furnace": {
+			"heat":"Heat",
+			"progress":"Progress"
+		},
+		"Block Cutter": {
+			"energy":"Energy Storage: %.0f EU",
+			"progress":"Progress"
+		},
+		"Solar Destiller": {
+			"inputTank>>>Amount":"Water Amount",
+			"outputTank>>>Amount":"Distilled Water Amount"
+		},
+		"Fluid Distributor": {
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Sorting Machine": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Crop Havester": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Chargepad BatBox": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Chargepad CESU": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Chargepad MFE": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Chargepad MFSU": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Steam Kinetic Generator": {
+			"condensationprogress":"Condensation Progress",
+			"distilledwaterTank>>>Amount":"Distilled Water Amount"
+		},
+		"Solid Heat Generator": {
+			"HeatBuffer":"Heat Buffer",
+			"fuel":"Remaining Fuel"
+		},
+		"Fluid Heat Generator": {
+			"HeatBuffer":"Heat Buffer",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Radioisotope Thermo Heat Generator": {
+			"HeatBuffer":"Heat Buffer"
+		},
+		"Electric Heat Generator": {
+			"HeatBuffer":"Heat Buffer",
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Iron Furnace": {
+			"progress":"Progress",
+			"fuel":"Remaining Fuel",
+			"maxFuel":"Max Fuel"
+		},
+		"Electric Furnace": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Macerator": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Extractor": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Compressor": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Canning Machine": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU",
+			"inputTank>>>Amount":"Input Fluid Amount",
+			"outputTank>>>Amount":"Output Fluid Amount"
+		},
+		"Miner": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Pump": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU",
+			"fluidTank>>>Amount":"Fluid Amount"
+		},
+		"Magnetizer": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Electrolyzer": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Recycler": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"Induction Furnace": {
+			"progress":"Progress",
+			"energy":"Energy Storage: %.0f EU",
+			"heat":"Heat"
+		},
+		"Mass Fabricator": {
+			"energy":"Energy Storage: %.0f EU",
+			"scrap":"Scrap",
+			"fluidTank>>>Amount":"UU Amount"
+		},
+		"Terraformer": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"LV-Transformer": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"MV-Transformer": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"HV-Transformer": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"EV-Transformer": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"CESU": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"MFE": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"MFSU": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"BatBox": {
+			"energy":"Energy Storage: %.0f EU"
+		},
+		"TECrop": {
+			"size":"Growth Size",
+			"growthPoints":"Growth Points"
+		},
+		"Energy-O-Mat": {
+			"euOffer":"EU Offer",
+			"ownerGameProfile>>>Name":"Owner"
+		},
+		"Trade-O-Mat": {
+			"ownerGameProfile>>>Name":"Owner"
+		},
+		 "HeatGenerator": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"lavaTank>>>Amount":"Lava Amount"
+        },
+		"SolarGenerator": {
+            "electricityStored":"Stored Energy"
+        },
+		"GasGenerator": {
+            "electricityStored":"Stored Energy",
+			"fuelTank>>>stored>>>amount":"Fuel Amount"
+        },
+		"BioGenerator": {
+            "electricityStored":"Stored Energy",
+			"bioFuelStored":"Fuel Amount"
+        },
+		"AdvancedSolarGenerator": {
+            "electricityStored":"Stored Energy"
+        },
+		"WindTurbine": {
+            "electricityStored":"Stored Energy"
+        },
+		"EnrichmentChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"OsmiumCompressor": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"Combiner": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"Crusher": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"SmeltingFactory": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"AdvancedSmeltingFactory": {
+            "electricityStored":"Stored Energy"
+        },
+		"UltimateSmeltingFactory": {
+            "electricityStored":"Stored Energy"
+        },
+		"MetallurgicInfuser": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"PurificationChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"EnergizedSmelter": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"MekanismTeleporter": {
+            "electricityStored":"Stored Energy"
+        },
+		"ElectricPump": {
+            "electricityStored":"Stored Energy",
+			"fluidTank>>>Amount":"Fluid Amount"
+        },
+		"ElectricChest": {
+            "electricityStored":"Stored Energy"
+        },
+		"Chargepad": {
+            "electricityStored":"Stored Energy"
+        },
+		"LogisticalSorter": {
+            "electricityStored":"Stored Energy"
+        },
+		"EnergyCube": {
+            "electricityStored":"Stored Energy"
+        },
+		"SalinationController": {
+            "temperature":"Temperature",
+			"operatingTicks":"Progress",
+			"brineTank>>>Amount":"Brine Amount",
+			"waterTank>>>Amount":"Water Amount"
+        },
+		"RotaryCondensentrator": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"gasTank>>>Amount":"Gas Amount"
+        },
+		"ChemicalOxidizer": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"gasTank>>>stored>>>amount":"Gas Amount"
+        },
+		"ChemicalInfuser": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"leftTank>>>stored>>>amount":"Left Gas Amount",
+			"rightTank>>>stored>>>amount":"Right Gas Amount",
+			"centerTank>>>stored>>>amount":"Center Gas Amount"
+        },
+		"ChemicalInjectionChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"ElectrolyticSeparator": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"fluidTank>>>Amount":"Fluid Amount",
+			"leftTank>>>stored>>>amount":"Left Gas Amount",
+			"rightTank>>>stored>>>amount":"Right Gas Amount"
+        },
+		"PrecisionSawmill": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress"
+        },
+		"ChemicalDissolutionChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"gasTank>>>stored>>>amount":"Gas Amount",
+			"injectTank>>>stored>>>amount":"Inject Gas Amount"
+        },
+		"ChemicalWasher": {
+            "electricityStored":"Stored Energy",
+			"leftTank>>>Amount":"Water Amount",
+			"centerTank>>>stored>>>amount":"Left Gas Amount",
+			"rightTank>>>stored>>>amount":"Right Gas Amount"
+        },
+		"ChemicalCrystallizer": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"rightTank>>>stored>>>amount":"Gas Amount"
+        },
+		"SeismicVibrator": {
+            "electricityStored":"Stored Energy"
+        },
+		"PressurizedReactionChamber": {
+            "electricityStored":"Stored Energy",
+			"operatingTicks":"Progress",
+			"inputFluidTank>>>Amount":"Input Fluid Amount",
+			"inputGasTank>>>Amount":"Input Gas Amount",
+			"outputGasTank>>>Amount":"Output Gas Amount"
+        },
+		"PortableTank": {
+            "fluidTank>>>Amount":"Fluid Amount"
+        },
+		"FluidicPlenisher": {
+            "fluidTank>>>Amount":"Fluid Amount"
+		},
+		"factory.*": {
+			"energyStored": "function p(v){var r = (v);return 'Energy Storage: '+r+' RF'};",
+			"Energy": "function p(v){var r = (v);return 'Energy: '+r+' RF'};",
+			"storedQuantity": "function p(v){var r = (v);return 'Quantity Stored: '+r};",
+			"fortune": "function p(v){var r = (v);return 'Fortune: '+r};",
+			"fortune": "function p(v){var r = (v);return 'Fortune: '+r};"
+		},
+		"factoryLaserDrill": {
+			"energyStored": "function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};",
+			"workDone": "function p(v){var r = (v);return 'Progress: '+r};"
+		},
+		"factorySteamTurbine": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Steam Amount: '+r+' mB'};"
+		},
+		"factoryAutoBrewer": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Water Amount: '+r+' mB'};"
+		},
+		"factoryBlockSmasher": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+		},
+		"factoryAutoAnvil": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+		},
+		"factoryAutoEnchanter": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+		},
+		"factoryWeatherCollector": {
+			"Tanks>>>Amount": "function p(v){var r = (v);return 'Water Amount: '+r+' mB'};"
+		},
+		"RC.*": {
+			"power": "function p(v){var r = (v);return '\u00A7fPower: '+r+' W'};",
+			"torque": "function p(v){var r = (v);return '\u00A7fTorque: '+r+' Nm'};",
+			"omega": "function p(v){var r = (v);return '\u00A7fSpeed: '+r+' rad/s'};"
+		},
+			"TConstruct.Smeltery": {
+			"Layers": "function p(v){var r = (v);return 'Level: '+r};",
+			"MaxLiquid": "function p(v){var r = (v);return 'Max Liquid: ('+r+' mB)'};"
+        },
+		"TConstruct.Furnace": {
+			"Fuel": "function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r.toFixed(0)+' Seconds'};"
+        },
+		"FrypanLogic": {
+			"Fuel": "function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r.toFixed(0)+' Seconds'};"
+		},
+		"TileInfusionStone": {
+			"instability":"\u00A7fInstability: %.0f"
+		},
+		"TileAlchemyFurnace": {
+			"BurnTime":"function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r.toFixed(0)+' Seconds'};",
+			"Vis":"\u00A7fVis Amount Total"
+		},
+		"TileSiphon": {
+			"amount":"\u00A7fVis Amount Total"
+		},
+		"TileTube.*": {
+			"amount":"Vis Amount"
+		},
+		"TileCrucible": {
+			"Amount":"function p(v){var r = (v);return '\u00A7fWater Amount: '+r+' mB'};",
+			"Heat":"function p(v){var r = (v);return '\u00A7fHeat: '+r};"
+		},
+		"TileJarBrain": {
+			"XP":"function p(v){var r = (v);return 'XP Storage  '+r};"
+		},
+		"thermalexpansion.*": {
+			"Fuel":"function p(v){var r = (v);return '\u00A7fFuel: '+r};",
+			"ProcRem":"function p(v){var r = (v);return '\u00A7fRemain Time: '+r+' ticks'};"
+		},
+		"thermalexpansion.DynamoSteam": {
+			"SteamTank>>>Amount":"function p(v){var r = (v);return '\u00A7fSteam Amount: '+r+' mB'};",
+			"WaterTank>>>Amount":"function p(v){var r = (v);return '\u00A7fWater Amount: '+r+' mB'};"
+		},
+		"thermalexpansion.DynamoCompression": {
+			"FuelTank>>>Amount":"function p(v){var r = (v);return '\u00A7fFuel Amount: '+r+' mB'};",
+			"CoolantTank>>>Amount":"function p(v){var r = (v);return '\u00A7fCoolant Amount: '+r+' mB'};"
+		},
+		"thermalexpansion.Sponge": {
+			"FluidName":"function p(v){r=v.substring(0,1).toUpperCase()+v.substring(1);return '\u00A7fFluid: ' +r}",
+			"Amount":"function p(v){var r = (v);return '\u00A7fAmount: '+r+' mB'};"
+		},
+		"thermalexpansion.Precipitator": {
+			"Amount":"function p(v){var r = (v);return '\u00A7fFluid Amount: '+r+' mB'};"
+		},
+		"thermalexpansion.Extruder": {
+			"ColdTank>>>Amount":"function p(v){var r = (v);return '\u00A7fWater Amount: '+r+' mB'};",
+			"HotTank>>>Amount":"function p(v){var r = (v);return '\u00A7fLava Amount: '+r+' mB'};"
+		},
+		"thermalexpansion.Accumulator": {
+			"Amount":"function p(v){var r = (v);return '\u00A7fWater Amount: '+r+' mB'};"
+		},
+		"thermalexpansion.Assembler": {
+			"Amount":"function p(v){var r = (v);return '\u00A7fFluid Amount: '+r+' mB'};"
+		},
+		"thermalexpansion.Activator": {
+			"LeftClick":"\u00A7fLeft Click",
+			"Sneaking":"\u00A7fSneaking"
+		},
+		"thermalexpansion.Tesseract": {
+			"Frequency":"\u00A7fFrequency"
+		},
+		"witchery:altar": {
+			"Power":"\u00A7fPower: %.0f",
+			"PowerScale":"function p(v){var r = (v);return '\u00A7fPower Scale: x'+r};"
+		},
+		"witchery:spinningwheel": {
+			"CookTime":"function p(v){var r = (v/3);return '\u00A7fProgress: '+r+' %'};"
+		},
+		"witchery:witchesovenidle": {
+			"CookTime":"function p(v){var r = (v/1.6);return '\u00A7fProgress: '+r+' %'};",
+			"BurnTime":"function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r+' Seconds'};"
+		},
+		"witchery:distilleryidle": {
+			"CookTime":"function p(v){var r = (v/8);return '\u00A7fProgress: '+r+' %'};"
+		},
+		"witchery:leechchest": {
+			"WITCPlayers>>>0>>>Player":"function p(v){var r = (v);return '\u00A7fTaglock Player: '+r};"
+		}
+	}
+}
