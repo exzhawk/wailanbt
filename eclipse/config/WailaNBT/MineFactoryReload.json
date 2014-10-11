@@ -1,33 +1,113 @@
 {
     ".*": {
-		"factory.*": {
-			"energyStored": "function p(v){var r = (v);return 'Energy Storage: '+r+' RF'};",
-			"Energy": "function p(v){var r = (v);return 'Energy: '+r+' RF'};",
-			"storedQuantity": "function p(v){var r = (v);return 'Quantity Stored: '+r};",
-			"fortune": "function p(v){var r = (v);return 'Fortune: '+r};",
-			"fortune": "function p(v){var r = (v);return 'Fortune: '+r};"
-		},
 		"factoryLaserDrill": {
-			"energyStored": "function p(v){var r = (v);return 'Energy Storage: '+r+' EU'};",
-			"workDone": "function p(v){var r = (v);return 'Progress: '+r};"
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 1000000 RF'};",
+			"workDone": "function p(v){var r = (v/3);return 'Progress  '+r.toFixed(0)+' %'};"
+		},
+		"factoryLaserDrillPrecharger": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 96000 RF'};"
+		},
+		"factoryHarvester": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Sludge  '+r+' / 4000 mB'};"
+		},
+		"factoryPlanter": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 8000 RF'};"
 		},
 		"factorySteamTurbine": {
-			"Tanks>>>Amount": "function p(v){var r = (v);return 'Steam Amount: '+r+' mB'};"
+			"buffer": "function p(v){var r = (v);return ''+r+' / 10000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Steam  '+r+' / 8000 mB'};"
 		},
-		"factoryAutoBrewer": {
-			"Tanks>>>Amount": "function p(v){var r = (v);return 'Water Amount: '+r+' mB'};"
+		"factoryBioReactor": {
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'BioFuel  '+r+' / 4000 mB'};"
+		},
+		"factoryBioFuelGenerator": {
+			"buffer": "function p(v){var r = (v);return ''+r+' / 10000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'BioFuel  '+r+' / 4000 mB'};"
+		},
+		"factoryGrinder": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 32000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Essence  '+r+' / 4000 mB'};"
 		},
 		"factoryBlockSmasher": {
-			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Essence  '+r+' / 4000 mB'};"
+		},
+		"factoryBlockPlacer": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};"
 		},
 		"factoryAutoAnvil": {
-			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Essence  '+r+' / 4000 mB'};"
 		},
 		"factoryAutoEnchanter": {
-			"Tanks>>>Amount": "function p(v){var r = (v);return 'Essence Amount: '+r+' mB'};"
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Essence  '+r+' / 4000 mB'};"
+		},
+		"factoryAutoBrewer": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Water  '+r+' / 4000 mB'};"
+		},
+		"factoryAutoDisenchanter": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};"
+		},
+		"factoryMobRouter": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};"
+		},
+		"factoryChronotyper": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};"
+		},
+		"factoryChunkLoader": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 2147483647 RF'};"
+		},
+		"factoryVet": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 32000 RF'};"
 		},
 		"factoryWeatherCollector": {
-			"Tanks>>>Amount": "function p(v){var r = (v);return 'Water Amount: '+r+' mB'};"
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Water  '+r+' / 4000 mB'};"
+		},
+		"factoryFruitPicker": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};"
+		},
+		"factoryAutoSpawner": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 32000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Essence  '+r+' / 4000 mB'};"
+		},
+		"factoryMeatPacker": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Meat  '+r+' / 4000 mB'};"
+		},
+		"factoryLavaFabricator": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Lava  '+r+' / 1000 mB'};"
+		},
+		"factorySteamBoiler": {
+			"Tanks>>>1>>>Amount": "function p(v){var r = (v);return 'Water  '+r+' / 16000 mB'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Steam  '+r+' / 32000 mB'};"
+		},
+		"factoryComposter": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Sewage  '+r+' / 4000 mB'};"
+		},
+		"factoryRancher": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 32000 RF'};"
+		},
+		"factoryFertilizer": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 32000 RF'};"
+		},
+		"factorySludgeBoiler": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};",
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Sludge  '+r+' / 4000 mB'};"
+		},
+		"factorySewer": {
+			"Tanks>>>0>>>Amount": "function p(v){var r = (v);return 'Sewage  '+r+' / 1000 mB'};"
+		},
+		"factoryFisher": {
+			"energyStored": "function p(v){var r = (v);return ''+r+' / 16000 RF'};"
+		},
+		"factoryDeepStorageUnit": {
+			"storedQuantity": "function p(v){var r = (v);return 'Stored  '+r};"
 		}
 	}
 }
