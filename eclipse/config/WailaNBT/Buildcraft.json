@@ -1,5 +1,5 @@
 {
-	"BuildCraft\|.*:wrenchItem": {
+	".*": {
         	"net.minecraft.src.buildcraft.energy.TileEngineCreative": {
             		"heat":"Heat",
             		"progress":"Stroke Progress",
@@ -24,16 +24,34 @@
             		"energy": "Energy"
 	},
 		"net.minecraft.src.buildcraft.energy.TileEngineWood": {
-            		"heat":"Heat",
+                    "heat":"function p(v){var r = v ;return '\u00A7cheat: '+r};",
             		"progress":"Stroke Progress",
             		"energy":"Energy"
 	},
 		"net.minecraft.src.buildcraft.energy.TileEngineStone": {
-            		"heat":"Heat",
+            		"heat":"function p(v){var r = v ;return '\u00A7cheat: '+r};",
             		"progress":"Stroke Progress",
             		"energy":"Energy",
 			"burnTime":"Burn Time",
-			"totalBurnTime":"Total Burn Time"
+			"totalBurnTime":"Total Burn Time",
+			"Items>>>0>>>id": "function p(v){return names[v]}",
+			"Items>>>0>>>Count": "function p(v){return 'count  '+v}"
+	},
+	"net.minecraft.src.buildcraft.energy.TileEngineIron": {
+            		"heat":"function p(v){var r = v ;return '\u00A7cheat: '+r};",
+            		"progress":"Stroke Progress",
+            		"energy":"Energy",
+			"burnTime":"Burn Time",
+			"penaltyCooling":"cooling",
+			"tankCoolant>>>FluidName": "water",
+			"tankCoolant>>>Amount":"Amount",
+			"tankFuel>>>FluidName": "fuel",
+			"tankFuel>>>Amount":"Amount"
+	},
+	"net.minecraft.src.buildcraft.factory.TileFloodGate":{
+	"powered":"redstone sign?",
+	"tank>>>FluidName":"Fluid",
+	"tank>>>Amount":"Amount"
 	},
 		"EnergyConverter": {
             		"mjStored":"MJ Stored",
@@ -41,6 +59,14 @@
 	},
 		"Machine": {
             		"mjStored":"MJ Stored"
+	},
+		"Filler": {
+            		"mjStored":"MJ Stored",
+					"pattern":"pattern"
+	},
+	    "net.minecraft.src.buildcraft.factory.TileBuilder": {
+            		"mjStored":"MJ Stored",
+					"done":"done?"
 	}
     }
 }
