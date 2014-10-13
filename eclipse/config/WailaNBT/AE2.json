@@ -1,29 +1,10 @@
 {
     ".*": {
-		"BlockChest": {
-			"internalCurrentPower":"Internal Power: %.0f AE",
-			"Priority":"Priority"
-		},
 		"BlockDrive": {
-			"Priority":"Priority"
+			"priority":"Priority  "
 		},
-		"BlockInterface": {
-			"Priority":"Priority"
-		},
-		"BlockInscriber": {
-			"internalCurrentPower":"Internal Power: %.0f AE"
-		},
-		"BlockController": {
-			"internalCurrentPower":"Internal Power: %.0f AE"
-		},
-		"BlockCondenser": {
-			"storedPower":"Internal Power: %.0f AE"
-		},
-		"BlockCharger": {
-			"internalCurrentPower":"Internal Power: %.0f AE"
-		},
-		"BlockCableBus": {
-			"extra:6>>>usedChannels":"Used Channels"
+		"BlockChest": {
+			"priority":"Priority  "
 		}
 	}
 }
