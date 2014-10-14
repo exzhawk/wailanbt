@@ -1,0 +1,23 @@
+{
+    ".*": {
+		"Condenser Tile": {
+			"Items>>>0>>>id": "function p(v){return names[v]}",
+			"EMC":"EMC  %.0f"
+		},
+		"Transmutation Tablet Tile": {
+			"EMC":"EMC  %.0f"
+		},
+		"Energy Collector.*": {
+			"EMC":"EMC  %.0f"
+		},
+		"AM Relay.*": {
+			"EMC":"EMC  %.0f"
+		},
+		"RM Furnace Tile": {
+			"EMC":"EMC  %.0f"
+		},
+		"DM Furnace Tile": {
+			"EMC":"EMC  %.0f"
+		}
+	}
+}
