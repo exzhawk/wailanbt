@@ -48,11 +48,6 @@
 		},
 			"forestry.Analyzer": {
 				"Amount":"Honey Amount: %.0f mB"
-		},
-			"forestry.*": {
-				"Temp":"function p(v){var r = (v*100);return 'Temperature: '+r.toFixed(0)+' %'};",
-				"Humidity":"function p(v){var r = (v*100);return 'Humidity: '+r.toFixed(0)+' %'};",
-				"Throttle":"function p(v){var r = (v/5.5);return 'Life Stage: '+r.toFixed(0)+' %'};"
 		}
 	}
 }
