@@ -1,0 +1,16 @@
+{
+    ".*": {
+		"logisticspipes.*": {
+			"powerLevel": "function p(v){var r = (v);return ''+r+' / 2000000 LP'};"
+		},
+		"logisticspipes.blocks.powertile.LogisticsBCPowerProviderTileEntity": {
+			"internalStorage":"%.0f / 1000000 MJ"
+		},
+		"logisticspipes.blocks.powertile.LogisticsRFPowerProviderTileEntity.disable": {
+			"internalStorage":"%.0f / 10000000 RF"
+		},
+		"logisticspipes.blocks.powertile.LogisticsIC2PowerProviderTileEntity": {
+			"internalStorage":"%.0f / 40000000 EU"
+		}
+	}
+}
