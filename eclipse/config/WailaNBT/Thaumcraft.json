@@ -1,24 +1,27 @@
 {
     ".*": {
 		"TileInfusionStone": {
-			"instability":"\u00A7fInstability: %.0f"
+			"instability":"Instability  %.0f"
 		},
 		"TileAlchemyFurnace": {
-			"BurnTime":"function p(v){var r = (v/20);return '\u00A7fBurn Time Left: '+r.toFixed(0)+' Seconds'};",
-			"Vis":"\u00A7fVis Amount Total"
+			"Vis":"Vis Amount"
 		},
 		"TileSiphon": {
-			"amount":"\u00A7fVis Amount Total"
+			"amount":"Vis Amount"
 		},
 		"TileTube.*": {
 			"amount":"Vis Amount"
 		},
 		"TileCrucible": {
-			"Amount":"function p(v){var r = (v);return '\u00A7fWater Amount: '+r+' mB'};",
-			"Heat":"function p(v){var r = (v);return '\u00A7fHeat: '+r};"
+			"Amount":"function p(v){var r = (v);return 'Water Amount  '+r+' mB'};",
+			"Heat":"Heat"
+		},
+		"TileSpa": {
+			"Amount":"function p(v){var r = (v);return 'Water Amount  '+r+' mB'};",
+			"Items>>>0>>>Count":"function p(v){var r = (v);return 'Bath Salts  '+r};"
 		},
 		"TileJarBrain": {
-			"XP":"function p(v){var r = (v);return 'XP Storage  '+r};"
+			"XP":"XP"
 		}
 	}
 }
