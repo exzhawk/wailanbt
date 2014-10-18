@@ -14,7 +14,7 @@
 		},
 		"TileCrucible": {
 			"Amount":"function p(v){var r = (v);return 'Water Amount  '+r+' mB'};",
-			"Heat":"Heat"
+			"Heat":"function p(v){var r = (v);return 'Heat  '+r};"
 		},
 		"TileSpa": {
 			"Amount":"function p(v){var r = (v);return 'Water Amount  '+r+' mB'};",
