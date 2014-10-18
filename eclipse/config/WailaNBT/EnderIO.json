@@ -1,37 +1,44 @@
 {
     ".*": {
 		"blockKillerJoeTileEntity": {
-			"experienceLevel":"function p(v){var r = (v);return '\u00A7fLevel: '+r};",
-			"experienceTotal":"function p(v){var r = (v);return '\u00A7fExperience: '+r};",
-			"fuelTank>>>Amount":"function p(v){var r = (v);return '\u00A7fNutrient Amount: '+r+'/2000 mB'};"
+			"experienceTotal":"function p(v){var r = (v);return 'Experience  '+r};"
 		},
 		"blockZombieGeneratorTileEntity": {
-			"fuelTank>>>Amount":"function p(v){var r = (v);return '\u00A7fNutrient Amount: '+r+'/2000 mB'};"
+			"fuelTank>>>Amount":"function p(v){var r = (v);return 'Nutrient Amount  '+r+'/ 2000 mB'};"
 		},
 		"blockPoweredSpawnerTileEntity": {
-			"currentTask>>>chance":"\u00A7fSpawn Chance: %.2f",
-			"currentTask>>>usedEnergy":"\u00A7fEnergy Used: %.0f RF"
-		},
-		"blockTankTileEntity": {
-			"tankContents>>>Amount":"function p(v){var r = (v);return '\u00A7fFluid Amount: '+r+' mB'};",
-			"tankContents>>>FluidName":"function p(v){r=v.substring(0,1).toUpperCase()+v.substring(1);return '\u00A7fFluid: ' +r}"
-		},
-		"blockStirlingGeneratorTileEntity": {
-			"burnTime":"function p(v){var r = (v/20);return 'Burn Time Left: '+r.toFixed(0)+' Seconds'};"
+			"storedEnergyRF":"function p(v){var r = (v*10);return 'Energy  '+r+' / 1000000 RF'};",
+			"currentTask>>>chance":"Spawn Chance  %.2f"
 		},
 		"blockCombustionGeneratorTileEntity": {
-			"coolantTank>>>Amount":"function p(v){var r = (v);return 'Coolant Amount: '+r+'/5000 mB'};",
-			"fuelTank>>>Amount":"function p(v){var r = (v);return 'Fuel Amount: '+r+'/5000 mB'};"
+			"coolantTank>>>Amount":"function p(v){var r = (v);return 'Coolant Amount  '+r+'/ 5000 mB'};",
+			"fuelTank>>>Amount":"function p(v){var r = (v);return 'Fuel Amount  '+r+'/ 5000 mB'};"
 		},
 		"blockSagMillTileEntity": {
-			"storedEnergy":"function p(v){var r = (v);return 'Energy: '+r+' RF'};"
+			"storedEnergyRF":"function p(v){var r = (v*10);return 'Energy  '+r+' / 1000000 RF'};"
 		},
 		"blockAlloySmelterTileEntity": {
-			"storedEnergy":"function p(v){var r = (v);return 'Energy: '+r+' RF'};"
+			"storedEnergyRF":"function p(v){var r = (v*10);return 'Energy  '+r+' / 1000000 RF'};"
 		},
 		"blockVatTileEntity": {
-			"inputTank>>>Amount":"function p(v){var r = (v);return 'Input Fluid Amount: '+r+' /8000 mB'};",
-			"outputTank>>>Amount":"function p(v){var r = (v);return 'Output Fluid Amount: '+r+' /8000 mB'};"
+			"inputTank>>>Amount":"function p(v){var r = (v);return 'Input Fluid Amount  '+r+' / 8000 mB'};",
+			"outputTank>>>Amount":"function p(v){var r = (v);return 'Output Fluid Amount  '+r+' / 8000 mB'};"
+		},
+		"blockWirelessChargerTileEntity": {
+			"storedEnergyRF":"function p(v){var r = (v);return 'Energy  '+r+' RF'};"
+		},
+		"blockSliceAndSpliceTileEntity": {
+			"storedEnergyRF":"function p(v){var r = (v*10);return 'Energy  '+r+' / 1000000 RF'};"
+		},
+		"blockSoulBinderTileEntity": {
+			"storedEnergyRF":"function p(v){var r = (v*10);return 'Energy  '+r+' / 1000000 RF'};",
+			"experienceTotal":"function p(v){var r = (v);return 'Experience  '+r};"
+		},
+		"blockAttractorTileEntity": {
+			"storedEnergyRF":"function p(v){var r = (v*10);return 'Energy  '+r+' / 1000000 RF'};"
+		},
+		"blockSpawnGuardTileEntity": {
+			"storedEnergyRF":"function p(v){var r = (v*10);return 'Energy  '+r+' / 1000000 RF'};"
 		}
 	}
 }
