@@ -1,0 +1,7 @@
+wailanbt.info.NotHolding=[WailaNBT] 당신은 무엇인가 보유해야 합니다!
+wailanbt.info.CreateEmptyConfig=[WailaNBT] 설정파일을 찾을수 없어 새로운 설정파일을 생성하였습니다.
+wailanbt.info.FailCreateEmptyConfig=[WailaNBT] 빈 설정파일을 새로 생성하는데 실패했습니다.
+wailanbt.info.JsonContentError=[WailaNBT] %s 파일의 설정을 인식하지 못했습니다..
+wailanbt.info.ParsingError=[WailaNBT] %s 파일 구문분석 오류.
+wailanbt.info.ConfigLoaded=[WailaNBT] 설정 로드 완료!
+wailanbt.info.NotPointing=[WailNBT] 당신은 엔티티를 지정해야 합니다!
