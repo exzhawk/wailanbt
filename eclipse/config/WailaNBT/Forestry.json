@@ -1,9 +1,16 @@
 {
     ".*": {
+			"forestry.Fabricator": {
+				"Heat":"function p(v){var r = (v/10+20);return 'Heat: '+r.toFixed(0)+' C'};",
+				"EnergyManager>>>EnergyStorage>>>Energy":"Energy Storage: %.0f RF"
+		},
+			
 			"forestry.Engine.*": {
-				"EngineStored":"Energy Stored: %.0f MJ",
+				"EnergyManager>>>EnergyStorage>>>Energy":"Energy Storage: %.0f RF",
+				"AshProduction":"function p(v){var r = (v/75);return 'Ash Production: '+r.toFixed(0)+'%'};",
 				"EngineHeat":"function p(v){var r = (v/10+20);return 'Heat: '+r.toFixed(0)+' C'};",
 				"EngineBurnTime":"function p(v){var r = (v/20);return 'Burn Time Left: '+r.toFixed(0)+' Seconds'};",
+				"EngineProgress":"Engine Progress: %.2f",
 				"FuelSlot>>>Amount":"Fuel Tank: %.0f mB",
 				"HeatingSlot>>>Amount":"Heating Tank: %.0f mB"
 		},
