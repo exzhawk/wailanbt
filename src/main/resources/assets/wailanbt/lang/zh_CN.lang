@@ -1,5 +1,5 @@
 wailanbt.info.NotHolding=[WailaNBT] 你必须手持一件物品!
-wailanbt.info.CreateEmptyConfig=[WailaNBT] 未找到配置文件, 已创建default.json在config目录下
+wailanbt.info.CreateEmptyConfig=[WailaNBT] 未找到配置文件, 已在config目录下创建default.json
 wailanbt.info.FailCreateEmptyConfig=[WailaNBT] 创建default.json失败
 wailanbt.info.JsonContentError=[WailaNBT] %s 不是有效的配置文件
 wailanbt.info.ParsingError=[WailaNBT] %s 不是有效的JSON文件
