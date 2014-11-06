@@ -1,51 +1,68 @@
 {
    ".*":{
-        "boiler":{
+        "steamcraft:boiler":{
 		"water":"water",
 		"steam":"steam",
 		"BurnTime":"burn time",
 		"Items>>>0>>>id": "function p(v){return names[v]}",
 		"Items>>>0>>>Count": "count"
 		},
-		"steamTank":{
+		"steamcraft:steamTank":{
         "steam":"steam"
 		},
-		"flashBoiler":{
+		"steamcraft:flashBoiler":{
 		"BurnTime":"burn time",
 		"water":"water",
 		"steam":"steam",
 		"heat":"function p(v){var r = (v);return '\u00A7cheat: '+r};"
 		},
-		"smasher":{
+		"steamcraft:smasher":{
 		"steam":"steam",
 		"hasBeenSet":"has Been Set or not"
 		},
-		"heater":{
+		"steamcraft:heater":{
 		"steam":"steam"
 		},
-		"steamCharger":{
+		"steamcraft:steamCharger":{
 		"steam":"steam"
 		},
-		"steamHammer":{
+		"steamcraft:chargingPad":{
+		"steam":"steam"
+		},
+		"steamcraft:steamHammer":{
 		"steam":"steam",
 		"progress":"progress",
 		"cost":"cost"
 		},
-		"itemMortar":{
+		"steamcraft:itemMortar":{
 		"steam":"steam",
 		"fireTicks":"fireTicks"
 		},
-		"thumper":{
+		"steamcraft:thumper":{
 		"steam":"steam",
 		"progress":"progress"
 		},
-		"fan":{
+		"steamcraft:fan":{
 		"steam":"steam",
 		"range":"range"
 		},
-		"vacuum":{
+		"steamcraft:vacuum":{
 		"steam":"steam",
 		"range":"range"
+		},
+		"steamcraft:pipe":{
+		"steam":"steam"
+		},
+		"steamcraft:pump":{
+		"water":"water",
+		"steam":"steam"
+		},
+		"steamcraft:steamcraftCrucible":{
+		"liquids":"liquids"
+		},
+		"steamcraft:valvePipe":{
+		"steam":"steam",
+		"open":"open"
 		}
 }
 }
