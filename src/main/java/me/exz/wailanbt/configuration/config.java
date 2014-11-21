@@ -14,10 +14,7 @@ import net.minecraft.util.StatCollector;
 
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -52,21 +49,25 @@ public class config {
         NBTHandler.manager = new ScriptEngineManager(null);
         NBTHandler.engine = NBTHandler.manager.getEngineByName("javascript");
         NBTHandler.scriptSet = new HashSet<String>();
-        try {
-            NBTHandler.engine.eval("var names={}");
-        } catch (ScriptException e) {
-            e.printStackTrace();
-        }
-        for (Object item : Item.itemRegistry) {
-            String ID = String.valueOf(Item.itemRegistry.getIDForObject(item));
-            String name = StatCollector.translateToLocal(((Item)item).getUnlocalizedName()+".name").trim();
-            try {
-                NBTHandler.engine.eval("names['"+ID+"']='"+name+"'");
-            } catch (ScriptException e) {
-                e.printStackTrace();
+//        try {
+//            NBTHandler.engine.eval("var names={}");
+//        } catch (ScriptException e) {
+//            e.printStackTrace();
+//        }
+//        for (Object item : Item.itemRegistry) {
+//            String ID = String.valueOf(Item.itemRegistry.getIDForObject(item));
+//            String name = StatCollector.translateToLocal(((Item)item).getUnlocalizedName()+".name").trim();
+//            try {
+//                NBTHandler.engine.eval("names['"+ID+"']='"+name+"'");
+//            } catch (ScriptException e) {
+//                e.printStackTrace();
+//            }
+//        }
+        File[] configFiles = configDir.listFiles(new FilenameFilter(){
+            public boolean accept(File dir, String name) {
+                return name.endsWith(".json");
             }
-        }
-        File[] configFiles = configDir.listFiles();
+        });
         if (!(configFiles == null)) {
             for (File configFile : configFiles) {
                 if (configFile.isFile()) {
