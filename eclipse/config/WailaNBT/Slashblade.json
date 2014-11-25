@@ -1,0 +1,37 @@
+{
+    ".*": {
+		"flammpfeil.slashblade.BladeStand": {
+			"Blade>>>tag>>>display>>>Name":"function p(v){var r=(v);return '\u00A7f刀名：'+ r}",
+			"Blade>>>tag>>>killCount":"function p(v){
+			var r;
+			if (v>=1000){r='\u00A74'+'KillCount: '+ v} else {r= 'KillCount: ' + v};return r}",
+			"Blade>>>tag>>>ProudSoul":"function p(v){
+			var r;
+			if (v>=1000){r='\u00A75'+'ProudSoul: '+ v} else {r= 'ProudSoul: ' + v};return r}",
+			"Blade>>>tag>>>SpecialAttackType":"function p(v){
+			var r;
+			switch(v){
+			case '0':
+				r='次元斩';
+				break;
+			case '1':
+				r='幻影刃(纵)';
+				break;
+			case '2':
+				r='波刀龙胆';
+				break;
+			case '3':
+				r='幻影刃(横)';
+				break;
+			case '4':
+				r='平突';
+				break;
+			case '5':
+				r='門刃';
+			break;
+			default:
+				r='未知';
+			};return '\u00A7fSA: '+ r};"
+        }
+	}
+}
