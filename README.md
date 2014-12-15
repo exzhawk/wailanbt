@@ -1,3 +1,7 @@
+Currently not in active development.
+https://github.com/exzhawk/wailanbt/issues/21#issuecomment-63946241
+
+
 WailaNBT
 ========
 Waila NBT is a mod to show player defined specific NBT info on Waila HUD.
