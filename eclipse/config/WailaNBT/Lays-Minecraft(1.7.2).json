@@ -1,0 +1,569 @@
+{
+	".*" : {
+		".*(Lays-Minecraft-Library)*":{
+			"id":"function p(v){
+				//這邊至少要觸發過一次才會運作,只要碰到一個tileEntity就會了
+				return '__ERROR__';
+			}
+			function getTargetNBT(){
+						try{
+						importClass(net.minecraft.client.Minecraft);
+						importClass(net.minecraft.util.MovingObjectPosition);
+						importClass(net.minecraft.nbt.NBTTagCompound);
+						var mc = Minecraft.func_71410_x()
+						if(mc.field_71476_x!=null&&mc.field_71476_x.field_72313_a==MovingObjectPosition.MovingObjectType.ENTITY)var target = mc.field_71476_x;
+						if(mc.field_71476_x!=null&&mc.field_71476_x.field_72313_a==MovingObjectPosition.MovingObjectType.BLOCK)var target = mc.field_71476_x;
+						var targetEntity ;
+						var targetNBT;
+						if(target!=null&&target.field_72313_a==MovingObjectPosition.MovingObjectType.ENTITY){
+							targetEntity = target.field_72308_g;
+							targetNBT =new NBTTagCompound();
+							targetEntity.func_70109_d(targetNBT);
+							return targetNBT;
+						}else if(target!=null&&target.field_72313_a==MovingObjectPosition.MovingObjectType.BLOCK){
+							var theWorld = mc.field_71441_e;
+							targetEntity = theWorld.func_147438_o(target.field_72311_b,target.field_72312_c,target.field_72309_d);
+							targetNBT =new NBTTagCompound();
+							targetEntity.func_145841_b(targetNBT);
+							return targetNBT;
+						}
+						return null;
+						}catch(e){
+							return 'error:'+e ;
+						}
+				}
+				//目前只能應比較簡單的結構,太複雜的會拋出exception
+				function convertNbtSrtingToObj(v){
+					try{
+						
+						//把所有數字後表示類型的英文字去掉
+						v= v.replace(/([0-9]+)(s|b|f|L|d)(,|})/g, '$1$3');
+						//把所有:之前的字串補上引號
+						v= v.replace(/(,|{){1}([^{},:]+):{1}/g, '$1\"$2\":');
+						//針對bytes[]陣列處理
+						v= v.replace(/\\[(\\d+) bytes\\]/g, '[$1]');
+						//針對int[]處理,去掉最後一個多出來的','
+						v= v.replace(/,\\]/g, ']');
+						//接下針對taglist
+						//如果一開始就是taglist的話就把頭尾換掉
+						v= v.replace(/^\\[/g, '{');
+						v= v.replace(/\\]$/g, '}');
+						//全部[]通通轉換成{}
+						v= v.replace(/:\\[/g, ':{');
+						v= v.replace(/\\](,|}){1}/g, '}$1');
+						//還原被一起轉換的int[]byte[]
+						v= v.replace(/:{(\\d+(,\\d+)*)}/g, ':[$1]');
+						
+						v = eval('('+v+')');
+					}catch(e){
+						throw ( 'error: '+e);
+					}
+					return v;
+			}
+			function findNameByID(id){
+			try{
+				importClass(net.minecraft.util.StatCollector);
+				importClass(net.minecraft.item.Item);
+				var item = Item.func_150899_d(id);
+				var name=StatCollector.func_74838_a(item.func_77658_a()+'.name');
+				return name;
+				
+			}catch(e){
+				return e;
+			}
+			}"
+		},
+		"EntityHorse":{
+			"OwnerName":"function p(v){if(v){return  '\u00A7r主人: \u00A7f\u00A7n'+v}return '野生的!'}",
+			"Attributes>>>4>>>Base":"\u00A7r跳躍力:\u00A7a%.3f",
+			"Attributes>>>2>>>Base":"\u00A7r速度:\u00A7c%.3f"
+		},
+		"Painting":{
+			"Motive":"畫名"
+		},
+		"PrimedTnt":{
+			"Fuse":"function p(v){
+				function animation(anT){
+		var animationArray = anT;
+		
+		this.getAnimationText = function (currectValue,maxValue){			
+			currectIndex = Math.floor((currectValue*(animationArray.length-1)/maxValue)>animationArray.length?animationArray.length-1:(currectValue*(animationArray.length-1)/maxValue));
+			//return currectIndex + '/'+ animationArray.length;
+			return  animationArray[currectIndex];
+		}
+	}
+	var animationText = [	
+	'□□□□□□□□□□□□',
+	'■□□□□□□□□□□□',
+	'■■□□□□□□□□□□',
+	'■■■□□□□□□□□□',
+	'■■■■□□□□□□□□',
+	'■■■■■■□□□□□□',
+	'■■■■■■■□□□□□',
+	'■■■■■■■■□□□□',
+	'■■■■■■■■■□□□',
+	'■■■■■■■■■■□□',
+	'■■■■■■■■■■■□',
+	'■■■■■■■■■■■■',
+		];
+	var maxTime = 80;
+	var animationTextObj = new animation(animationText);
+	var color = (v%20)>10?'\u00A7e':'\u00A7c';
+	return color+'\u00A7n'+animationTextObj.getAnimationText(v,maxTime) + '(' + (v/20).toFixed(1)+ ' s)';
+			}"
+		},	
+		"Skull" : {
+			"ExtraType" : "這是%s的頭顱!"
+		},
+		"Zombie":{
+			"ConversionTime":"function p(v){
+				function animation(anT){
+		var animationArray = anT;
+		
+		this.getAnimationText = function (currectValue,maxValue){			
+			currectIndex = Math.floor((currectValue*(animationArray.length-1)/maxValue)>animationArray.length?animationArray.length-1:(currectValue*(animationArray.length-1)/maxValue));
+			//return currectIndex + '/'+ animationArray.length;
+			return  animationArray[currectIndex];
+		}
+	}
+	var animationText = [	
+	'□□□□□□□□□□□□',
+	'■□□□□□□□□□□□',
+	'■■□□□□□□□□□□',
+	'■■■□□□□□□□□□',
+	'■■■■□□□□□□□□',
+	'■■■■■■□□□□□□',
+	'■■■■■■■□□□□□',
+	'■■■■■■■■□□□□',
+	'■■■■■■■■■□□□',
+	'■■■■■■■■■■□□',
+	'■■■■■■■■■■■□',
+	'■■■■■■■■■■■■',
+		];
+	var maxTime = 6000;
+	var animationTextObj = new animation(animationText);
+	if(v<0){
+		return '__ERROR__';
+	}else{
+		return '\u00A7r治療中:\u00A7a\u00A7n'+animationTextObj.getAnimationText(6000-v,maxTime) + '(' + Math.floor(v/20)+ ' s)';
+	}
+				return '恢復剩餘時間:'+v;
+			}"
+		},
+		"Furnace":{
+			"CookTime":"function p(v){
+	function animation(anT){
+		var animationArray = anT;
+		
+		this.getAnimationText = function (currectValue,maxValue){			
+			currectIndex = Math.floor((currectValue*(animationArray.length-1)/maxValue)>animationArray.length?animationArray.length-1:(currectValue*(animationArray.length-1)/maxValue));
+			//return currectIndex + '/'+ animationArray.length;
+			return  animationArray[currectIndex];
+		}
+	}
+	var animationText = [	
+	'□□□□□□□□□□□□',
+	'■□□□□□□□□□□□',
+	'■■□□□□□□□□□□',
+	'■■■□□□□□□□□□',
+	'■■■■□□□□□□□□',
+	'■■■■■■□□□□□□',
+	'■■■■■■■□□□□□',
+	'■■■■■■■■□□□□',
+	'■■■■■■■■■□□□',
+	'■■■■■■■■■■□□',
+	'■■■■■■■■■■■□',
+	'■■■■■■■■■■■■',
+		];
+	var maxTime = 200;
+	var animationTextObj = new animation(animationText);
+	return '進度\u00A7f'+animationTextObj.getAnimationText(v,maxTime)+ '('+(10-v/20).toFixed(1)+'s)';
+}",
+			"BurnTime":"function p(v){
+			return '燃燒值('+(v/20).toFixed(1)+'s)'
+		}"
+		},
+		"Cauldron":{
+			"BrewTime":"function p(v){
+	function animation(anT){
+		var animationArray = anT;
+		
+		this.getAnimationText = function (currectValue,maxValue){			
+			currectIndex = Math.floor((currectValue*(animationArray.length-1)/maxValue)>animationArray.length?animationArray.length-1:(currectValue*(animationArray.length-1)/maxValue));
+			//return currectIndex + '/'+ animationArray.length;
+			return  animationArray[currectIndex];
+		}
+	}
+	var animationText = [	
+	'□□□□□□□□□□□□',
+	'■□□□□□□□□□□□',
+	'■■□□□□□□□□□□',
+	'■■■□□□□□□□□□',
+	'■■■■□□□□□□□□',
+	'■■■■■■□□□□□□',
+	'■■■■■■■□□□□□',
+	'■■■■■■■■□□□□',
+	'■■■■■■■■■□□□',
+	'■■■■■■■■■■□□',
+	'■■■■■■■■■■■□',
+	'■■■■■■■■■■■■',
+		];
+	//建立全域變數CauldronTimeResetDelay來決定是否要重設進度調顯示以及重設延遲
+	if(typeof(CauldronTimeResetDelay)== 'undefined') CauldronTimeResetDelay =10 ;
+	var maxTime =400;
+	var animationTextObj = new animation(animationText);
+	var temp = CauldronTimeResetDelay;	
+	if((CauldronTimeResetDelay ==20) &&(v != 0))CauldronTimeResetDelay =0;
+	if((CauldronTimeResetDelay ==20) && (v == 0)) v = maxTime;
+	if(v == 0) CauldronTimeResetDelay++;
+	return '進度\u00A7f'+animationTextObj.getAnimationText(maxTime-v,maxTime)+'('+(v/20).toFixed(1)+' s)' ;
+}",
+			"Items>>>0>>>Damage":"function p(v){
+	//儲存所有藥水的資料
+	var potionArray=new function (){
+		//藥水的名稱
+		this.potionName=['','回覆','迅捷','抗火','劇毒','治療','夜視','清澈(不可能出現)','虛弱','力量','緩速','跳耀','傷害','水下呼吸','隱身','稀薄(不可能出現)'];
+		this.potionNarmalExtName=['水瓶','基礎 ','混濁的','(延長版)平凡的','平凡的','<錯誤>'];
+		//藥水文字的顏色預設空字串
+		this.potionColor=['\u00A79','\u00A7d\u00A7l','\u00A73\u00A7l','\u00A76\u00A7l','\u00A72\u00A7l','\u00A7d\u00A7l','\u00A79\u00A7l','','\u00A7c\u00A7l','\u00A75\u00A7l','\u00A7c\u00A7l','\u00A7a\u00A7l','\u00A74\u00A7l','\u00A79\u00A7l','\u00A73\u00A7l',''];
+		//藥水的種類，0為預設或是時效性藥水，1為時效性藥水(無藥水等級)
+		this.potionAttribute=[0,0,0,1,0,0,1,0,1,0,1,0,0,1,1,0];
+		//藥效的時長，若為藥效性藥水(立即治療)則值為0，單位為秒
+		this.potionEffectTime=[0,45,180,180,45,0,180,0,90,180,90,180,0,180,180,0];
+		//藥水種類名稱
+		this.potionType=['藥水','飛濺藥水'];
+		//藥水等級名稱還有延長版名稱
+		this.potionAttributeName = ['I','II','(延長版)'];
+	}
+	//協助計算藥水值的物件
+	function potionHelper( potionArray ){
+		var potionData=potionArray;
+		//取得藥水效果的id值
+		this.getEffectID=function(value){
+			return value&15;
+		}
+		//得取得藥水的效果名稱
+		this.getEffectName = function (value){
+			return potionData.potionName[this.getEffectID(value)];
+		}
+		//是否為延長版藥水是的話為1，反之則0
+		this.isExtendPotion = function (value) {
+			return (value&64)==64?1:0;
+		}
+		//取得效果時長，若為即刻生效藥水則為0
+		this.getEffectTime = function (value){
+			return potionData.potionEffectTime[this.getEffectID(value)];
+		}
+		//取得藥水等級,若為時效性藥水則為0(0為1級，1為2級
+		this.getPotionLevel = function (value){
+			return ((value&32)==32?1:0)&(~(potionData.potionAttribute[this.getEffectID(value)]));
+		}
+		//取得藥水種類，一般藥水為0，噴濺藥水為1
+		this.getType = function (value){
+			return (value&16384)==16384?1:0;
+		}
+		//取得藥水文字色碼,回傳字串
+		this.getColor = function (value){
+			return potionData.potionColor[this.getEffectID(value)];
+		}
+		//取得藥水正確的名稱
+		this.getPotionName = function (value){
+			var typeName = potionData.potionType[this.getType(value)];
+			var effectName = this.getEffectName(value);
+			var color = this.getColor(value);
+			if(this.getEffectID(value)==0){
+				switch(value&8304){
+					case 0:
+						return color + potionData.potionNarmalExtName[0];
+						break;
+					case 16:
+						return color + potionData.potionNarmalExtName[1]+typeName;
+						break;
+					case 32:
+						return color + potionData.potionNarmalExtName[2]+typeName;
+						break;
+					case 64:
+						return color + potionData.potionNarmalExtName[3]+typeName;
+						break;
+					case 8192:
+						return color + potionData.potionNarmalExtName[4]+typeName;
+						break;
+					default :
+						return color + potionData.potionNarmalExtName[5]+typeName;
+						
+				}
+			}else{
+				if(this.getEffectTime(value)!=0){
+					var effectTime = this.getEffectTime(value)*(this.isExtendPotion(value)?8:3)/3;
+					var effectTime = effectTime*(this.getType(value)?3:4)/4;
+					var effectTime = effectTime*(this.getPotionLevel(value)?1:2)/2;
+					var effectTimeString =  '('+Math.floor(effectTime/60) + ':' + (effectTime%60>9?'':'0')+Math.floor(effectTime%60)+')';
+				}else{
+					var effectTimeString=''
+				}
+				
+				var effectLevel = this.getPotionLevel(value);
+				return color+(this.isExtendPotion(value)?potionData.potionAttributeName[2]:'')+effectName+potionData.potionAttributeName[effectLevel]+typeName+effectTimeString;
+			}
+		}
+	}
+	var ph = new potionHelper(potionArray);
+	return ph.getPotionName(v);
+}",
+"Items>>>1>>>Damage":"function p(v){
+	//儲存所有藥水的資料
+	var potionArray=new function (){
+		//藥水的名稱
+		this.potionName=['','回覆','迅捷','抗火','劇毒','治療','夜視','清澈(不可能出現)','虛弱','力量','緩速','跳耀','傷害','水下呼吸','隱身','稀薄(不可能出現)'];
+		this.potionNarmalExtName=['水瓶','基礎 ','混濁的','(延長版)平凡的','平凡的','<錯誤>'];
+		//藥水文字的顏色預設空字串
+		this.potionColor=['\u00A79','\u00A7d\u00A7l','\u00A73\u00A7l','\u00A76\u00A7l','\u00A72\u00A7l','\u00A7d\u00A7l','\u00A79\u00A7l','','\u00A7c\u00A7l','\u00A75\u00A7l','\u00A7c\u00A7l','\u00A7a\u00A7l','\u00A74\u00A7l','\u00A79\u00A7l','\u00A73\u00A7l',''];
+		//藥水的種類，0為預設或是時效性藥水，1為時效性藥水(無藥水等級)
+		this.potionAttribute=[0,0,0,1,0,0,1,0,1,0,1,0,0,1,1,0];
+		//藥效的時長，若為藥效性藥水(立即治療)則值為0，單位為秒
+		this.potionEffectTime=[0,45,180,180,45,0,180,0,90,180,90,180,0,180,180,0];
+		//藥水種類名稱
+		this.potionType=['藥水','飛濺藥水'];
+		//藥水等級名稱還有延長版名稱
+		this.potionAttributeName = ['I','II','(延長版)'];
+	}
+	//協助計算藥水值的物件
+	function potionHelper( potionArray ){
+		var potionData=potionArray;
+		//取得藥水效果的id值
+		this.getEffectID=function(value){
+			return value&15;
+		}
+		//得取得藥水的效果名稱
+		this.getEffectName = function (value){
+			return potionData.potionName[this.getEffectID(value)];
+		}
+		//是否為延長版藥水是的話為1，反之則0
+		this.isExtendPotion = function (value) {
+			return (value&64)==64?1:0;
+		}
+		//取得效果時長，若為即刻生效藥水則為0
+		this.getEffectTime = function (value){
+			return potionData.potionEffectTime[this.getEffectID(value)];
+		}
+		//取得藥水等級,若為時效性藥水則為0(0為1級，1為2級
+		this.getPotionLevel = function (value){
+			return ((value&32)==32?1:0)&(~(potionData.potionAttribute[this.getEffectID(value)]));
+		}
+		//取得藥水種類，一般藥水為0，噴濺藥水為1
+		this.getType = function (value){
+			return (value&16384)==16384?1:0;
+		}
+		//取得藥水文字色碼,回傳字串
+		this.getColor = function (value){
+			return potionData.potionColor[this.getEffectID(value)];
+		}
+		//取得藥水正確的名稱
+		this.getPotionName = function (value){
+			var typeName = potionData.potionType[this.getType(value)];
+			var effectName = this.getEffectName(value);
+			var color = this.getColor(value);
+			if(this.getEffectID(value)==0){
+				switch(value&8304){
+					case 0:
+						return color + potionData.potionNarmalExtName[0];
+						break;
+					case 16:
+						return color + potionData.potionNarmalExtName[1]+typeName;
+						break;
+					case 32:
+						return color + potionData.potionNarmalExtName[2]+typeName;
+						break;
+					case 64:
+						return color + potionData.potionNarmalExtName[3]+typeName;
+						break;
+					case 8192:
+						return color + potionData.potionNarmalExtName[4]+typeName;
+						break;
+					default :
+						return color + potionData.potionNarmalExtName[5]+typeName;
+						
+				}
+			}else{
+				if(this.getEffectTime(value)!=0){
+					var effectTime = this.getEffectTime(value)*(this.isExtendPotion(value)?8:3)/3;
+					var effectTime = effectTime*(this.getType(value)?3:4)/4;
+					var effectTime = effectTime*(this.getPotionLevel(value)?1:2)/2;
+					var effectTimeString =  '('+Math.floor(effectTime/60) + ':' + (effectTime%60>9?'':'0')+Math.floor(effectTime%60)+')';
+				}else{
+					var effectTimeString=''
+				}
+				
+				var effectLevel = this.getPotionLevel(value);
+				return color+(this.isExtendPotion(value)?potionData.potionAttributeName[2]:'')+effectName+potionData.potionAttributeName[effectLevel]+typeName+effectTimeString;
+			}
+		}
+	}
+	
+	var ph = new potionHelper(potionArray);
+	return ph.getPotionName(v);
+}",
+"Items>>>2>>>Damage":"function p(v){
+	//儲存所有藥水的資料
+	var potionArray=new function (){
+		//藥水的名稱
+		this.potionName=['','回覆','迅捷','抗火','劇毒','治療','夜視','清澈(不可能出現)','虛弱','力量','緩速','跳耀','傷害','水下呼吸','隱身','稀薄(不可能出現)'];
+		this.potionNarmalExtName=['水瓶','基礎 ','混濁的','(延長版)平凡的','平凡的','<錯誤>'];
+		//藥水文字的顏色預設空字串
+		this.potionColor=['\u00A79','\u00A7d\u00A7l','\u00A73\u00A7l','\u00A76\u00A7l','\u00A72\u00A7l','\u00A7d\u00A7l','\u00A79\u00A7l','','\u00A7c\u00A7l','\u00A75\u00A7l','\u00A7c\u00A7l','\u00A7a\u00A7l','\u00A74\u00A7l','\u00A79\u00A7l','\u00A73\u00A7l',''];
+		//藥水的種類，0為預設或是時效性藥水，1為時效性藥水(無藥水等級)
+		this.potionAttribute=[0,0,0,1,0,0,1,0,1,0,1,0,0,1,1,0];
+		//藥效的時長，若為藥效性藥水(立即治療)則值為0，單位為秒
+		this.potionEffectTime=[0,45,180,180,45,0,180,0,90,180,90,180,0,180,180,0];
+		//藥水種類名稱
+		this.potionType=['藥水','飛濺藥水'];
+		//藥水等級名稱還有延長版名稱
+		this.potionAttributeName = ['I','II','(延長版)'];
+	}
+	//協助計算藥水值的物件
+	function potionHelper( potionArray ){
+		var potionData=potionArray;
+		//取得藥水效果的id值
+		this.getEffectID=function(value){
+			return value&15;
+		}
+		//得取得藥水的效果名稱
+		this.getEffectName = function (value){
+			return potionData.potionName[this.getEffectID(value)];
+		}
+		//是否為延長版藥水是的話為1，反之則0
+		this.isExtendPotion = function (value) {
+			return (value&64)==64?1:0;
+		}
+		//取得效果時長，若為即刻生效藥水則為0
+		this.getEffectTime = function (value){
+			return potionData.potionEffectTime[this.getEffectID(value)];
+		}
+		//取得藥水等級,若為時效性藥水則為0(0為1級，1為2級
+		this.getPotionLevel = function (value){
+			return ((value&32)==32?1:0)&(~(potionData.potionAttribute[this.getEffectID(value)]));
+		}
+		//取得藥水種類，一般藥水為0，噴濺藥水為1
+		this.getType = function (value){
+			return (value&16384)==16384?1:0;
+		}
+		//取得藥水文字色碼,回傳字串
+		this.getColor = function (value){
+			return potionData.potionColor[this.getEffectID(value)];
+		}
+		//取得藥水正確的名稱
+		this.getPotionName = function (value){
+			var typeName = potionData.potionType[this.getType(value)];
+			var effectName = this.getEffectName(value);
+			var color = this.getColor(value);
+			if(this.getEffectID(value)==0){
+				switch(value&8304){
+					case 0:
+						return color + potionData.potionNarmalExtName[0];
+						break;
+					case 16:
+						return color + potionData.potionNarmalExtName[1]+typeName;
+						break;
+					case 32:
+						return color + potionData.potionNarmalExtName[2]+typeName;
+						break;
+					case 64:
+						return color + potionData.potionNarmalExtName[3]+typeName;
+						break;
+					case 8192:
+						return color + potionData.potionNarmalExtName[4]+typeName;
+						break;
+					default :
+						return color + potionData.potionNarmalExtName[5]+typeName;
+						
+				}
+			}else{
+				if(this.getEffectTime(value)!=0){
+					var effectTime = this.getEffectTime(value)*(this.isExtendPotion(value)?8:3)/3;
+					var effectTime = effectTime*(this.getType(value)?3:4)/4;
+					var effectTime = effectTime*(this.getPotionLevel(value)?1:2)/2;
+					var effectTimeString =  '('+Math.floor(effectTime/60) + ':' + (effectTime%60>9?'':'0')+Math.floor(effectTime%60)+')';
+				}else{
+					var effectTimeString=''
+				}
+				
+				var effectLevel = this.getPotionLevel(value);
+				return color+(this.isExtendPotion(value)?potionData.potionAttributeName[2]:'')+effectName+potionData.potionAttributeName[effectLevel]+typeName+effectTimeString;
+			}
+		}
+	}
+	
+	var ph = new potionHelper(potionArray);
+	return ph.getPotionName(v);
+}"
+		},
+		".*(Lays-Minecraft-Animals)*" : {
+			"Owner":"function p(v){if(v){return  '\u00A7r主人: \u00A7f\u00A7n'+v}return '野生的!'}",
+			"Age" : "function p(v){ if(v>0){return '交配冷卻:\u00A74' + Math.floor(v/20) +' 秒' }else if(v<0) {return '成長:\u00A7a' + Math.ceil(v/20)*(-1) +' 秒' }return '__ERROR__'}",
+			"InLove":"function p(v){
+				function animation(anT){
+		var animationArray = anT;
+		
+		this.getAnimationText = function (currectValue,maxValue){			
+			currectIndex = Math.floor((currectValue*(animationArray.length-1)/maxValue)>animationArray.length?animationArray.length-1:(currectValue*(animationArray.length-1)/maxValue));
+			return  animationArray[currectIndex];
+		}
+	}
+	var animationText = [	
+	'□□□□□□□□□□□□',
+	'■□□□□□□□□□□□',
+	'■■□□□□□□□□□□',
+	'■■■□□□□□□□□□',
+	'■■■■□□□□□□□□',
+	'■■■■■■□□□□□□',
+	'■■■■■■■□□□□□',
+	'■■■■■■■■□□□□',
+	'■■■■■■■■■□□□',
+	'■■■■■■■■■■□□',
+	'■■■■■■■■■■■□',
+	'■■■■■■■■■■■■',
+		];
+	var maxTime = 600;
+	var animationTextObj = new animation(animationText);
+	if(v==0){
+		return '__ERROR__';
+	}else{
+		return '發情中:\u00A7d'+animationTextObj.getAnimationText(v,maxTime) + '(' + Math.floor(v/20)+ ' s)';
+	}
+			}"
+		},
+		".*(Lays-Minecraft-Entity)*":{
+			"Equipment":"function p(v){
+									try{
+										
+										var Equipment = convertNbtSrtingToObj(v);
+										var equipString='' ;	
+										for(item in Equipment){
+											var name=null;var count='';var ench='';
+											for(keyValue in Equipment[item]){												
+												if(keyValue=='id')name=findNameByID(Equipment[item][keyValue]);
+												if(keyValue=='Count')count = (Equipment[item][keyValue]!=1?'('+Equipment[item][keyValue]+'個)':'');
+												if(keyValue=='tag'){
+													for(tag in Equipment[item][keyValue]){
+														if(tag=='ench')ench ='[附魔]'
+													}
+												}
+												
+											}
+											if(name!=null)equipString+=name+ench+count+'\\n';
+										}
+										return equipString;
+									}catch(e){
+										return e;
+									}
+									
+									
+								}"			
+		}
+	},
+	"tooltip" : {
+		"minecraft:skull" : {
+			"SkullOwner" : "擁有者"
+		}
+	}
+}
