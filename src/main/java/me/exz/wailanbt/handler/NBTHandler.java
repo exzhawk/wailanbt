@@ -51,12 +51,12 @@ public class NBTHandler {
             for (Map.Entry<String, JsonElement> path : pathA) {
                 String tip = getTipFromNBTWithPath(n, path.getKey(), path.getValue().getAsString());
                 if (!tip.equals("__ERROR__")) {
-					//如果結果是空字串則忽略
+					//憒�蝯��舐征摮葡�蕭��
 					//ignore empty string
-					if((tip.equals(""))){
-						//支持換行符
+					if((!tip.equals(""))){
+						//�舀���蝚�
 						//support "\n"
-						String[] tipArray=tip.split("\\n");
+						String[] tipArray=tip.split("\n");
 						for (String tipTemp :tipArray)
 						{
                     		tips.add(tipTemp);
