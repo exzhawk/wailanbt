@@ -1,0 +1,72 @@
+{
+	".*": {
+        	"net.minecraft.src.buildcraft.energy.TileEngineCreative": {
+            		"heat":"热量",
+            		"progress":"进度",
+            		"energy":"内部能量储存"
+        },
+		"net.minecraft.src.buildcraft.factory.TileLaser": {
+            		"mjStored": "MJ 储存"
+        },
+		"net.minecraft.src.buildcraft.factory.TileAssemblyTable": {
+            		"energy": "内部能量储存"
+	},
+		"net.minecraft.src.buildcraft.factory.TilePump": {
+            		"mjStored": "MJ 储存",
+			"tank>>>Amount": "流体储存量",
+			"tank>>>FluidName": "流体储存量",
+			"tank>>>acceptedFluid": "输入流体"
+	},
+		"net.minecraft.src.buildcraft.factory.TileAssemblyAdvancedWorkbench": {
+            		"energy": "内部能量储存"
+	},
+		"net.minecraft.src.buildcraft.factory.TileIntegrationTable": {
+            		"energy": "内部能量储存"
+	},
+		"net.minecraft.src.buildcraft.energy.TileEngineWood": {
+                    "heat":"function p(v){var r = v ;return '\u00A7cheat: '+r};",
+            		"progress":"进度",
+            		"energy":"内部能量储存"
+	},
+		"net.minecraft.src.buildcraft.energy.TileEngineStone": {
+            		"heat":"function p(v){var r = v ;return '\u00A7cheat: '+r};",
+            		"progress":"进度",
+            		"energy":"内部能量储存",
+			"burnTime":"燃烧剩余时间",
+			"totalBurnTime":"总燃烧时间",
+			"Items>>>0>>>id": "function p(v){return names[v]}",
+			"Items>>>0>>>Count": "function p(v){return 'count  '+v}"
+	},
+	"net.minecraft.src.buildcraft.energy.TileEngineIron": {
+            		"heat":"function p(v){var r = v ;return '\u00A7cheat: '+r};",
+            		"progress":"进度",
+            		"energy":"内部能量储存",
+			"burnTime":"燃烧剩余时间",
+			"penaltyCooling":"冷却",
+			"tankCoolant>>>FluidName": "水",
+			"tankCoolant>>>Amount":"流体储存量",
+			"tankFuel>>>FluidName": "进度",
+			"tankFuel>>>Amount":"流体储存量"
+	},
+	"net.minecraft.src.buildcraft.factory.TileFloodGate":{
+	"powered":"红石的标志吗?",
+	"tank>>>FluidName":"流体种类",
+	"tank>>>Amount":"流体储存量"
+	},
+		"EnergyConverter": {
+            		"mjStored":"MJ 储存",
+			"converterMode":"模式"
+	},
+		"Machine": {
+            		"mjStored":"MJ 储存"
+	},
+		"Filler": {
+            		"mjStored":"MJ 储存",
+					"pattern":"模式"
+	},
+	    "net.minecraft.src.buildcraft.factory.TileBuilder": {
+            		"mjStored":"MJ 储存",
+					"done":"完成了吗?"
+	}
+    }
+}
