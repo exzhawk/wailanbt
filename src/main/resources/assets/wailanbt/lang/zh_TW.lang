@@ -1,0 +1,7 @@
+wailanbt.info.NotHolding=[WailaNBT]你必須手持一件物品！
+wailanbt.info.CreateEmptyConfig=[WailaNBT]未找到配置文件，已在配置目錄下創建default.json
+wailanbt.info.FailCreateEmptyConfig=[WailaNBT]創建default.json失敗
+wailanbt.info.JsonContentError=[WailaNBT]%s不是有效的配置文件
+wailanbt.info.ParsingError=[WailaNBT]%s不是有效的JSON文件
+wailanbt.info.ConfigLoaded=[WailaNBT]配置文件載入成功
+wailanbt.info.NotPointing=[WailNBT]你必須對準一個實體！
