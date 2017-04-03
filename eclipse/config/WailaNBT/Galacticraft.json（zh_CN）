@@ -1,0 +1,87 @@
+{
+".*": {
+  "Air Collector":{
+  "EnergyF":"能量",
+  "storedOxygenF":"氧气储量"
+  },
+    "Air Compressor":{
+  "EnergyF":"能量",
+  "storedOxygenF":"氧气储量"
+  },
+    "Oxygen Decompressor":{
+  "EnergyF":"能量",
+  "storedOxygenF":"氧气储量"
+  },
+      "Air Distributor":{
+  "EnergyF":"能量",
+  "storedOxygenF":"氧气储量"
+  },    
+  "Air Sealer":{
+  "EnergyF":"能量",
+  "storedOxygenF":"氧气储量"
+  },
+  "Refinery":{
+  "EnergyF":"能量",
+  "oilTank>>>Amount":"石油量",
+  "fuelTank>>>Amount":"燃油量"
+  },
+  "Fuel Loader":{
+  "EnergyF":"能量",
+  "fuelTank>>>Amount":"燃油量"
+  },
+  "Cargo Loader":{
+  "EnergyF":"能量"
+  },
+  "Cargo Unloader":{
+  "EnergyF":"能量"
+  },
+  "Galacticraft Coal Generator":{
+  "EnergyF":"能量",
+  "generateRate":"转换率",
+  "itemCookTime":"炼制时间"
+  },
+  "Circuit Fabricator":{
+  "EnergyF":"能量"
+  },
+  "Electric Ingot Compressor":{
+  "EnergyF":"能量"
+  },
+    "Galacticraft Solar Panel":{
+  "EnergyF":"能量"
+  },
+     "Energy Storage Module":{
+  "EnergyF":"能量"
+  },
+     "Galacticraft Electric Furnace":{
+  "EnergyF":"能量"
+  },
+  "Gas Liquefier":{
+  "EnergyF":"能量",
+  "TargetFrequency":"目标频率",
+    "gasTank>>>Amount":"燃气量",
+	  "liquidTank>>>Amount":"液体量"
+  },
+    "Methane Synthesizer":{
+  "EnergyF":"能量",
+  "TargetFrequency":"目标频率",
+    "gasTank>>>Amount":"燃气量",
+	  "liquidTank>>>Amount":"液体量"
+  },
+  "GalacticraftCore.Spaceship":{
+  "timeUntilLaunch":"发射剩余时间",
+   "fuelTank>>>Amount":"燃油量"
+   },
+     "SpaceshipT2":{
+  "timeUntilLaunch":"发射剩余时间",
+   "fuelTank>>>Amount":"燃油量"
+   },
+     "Tier3RocketGC":{
+  "timeUntilLaunch":"发射剩余时间",
+   "fuelTank>>>Amount":"燃油量"
+   },
+  "GalacticraftCore.Buggy":{
+  "fuel":"燃油(?)",
+   "fuelTank>>>Amount":"燃油量"
+   }
+  }
+}
